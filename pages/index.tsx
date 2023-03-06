@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar/Navbar";
 import { cn } from "@/utils/utils";
 import Head from "next/head";
 
@@ -13,9 +14,7 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <div className={cn("bg-night p-3 text-earth-300")}>
-        <h1 className="text-center">Home</h1>
-      </div>
+      <Navbar />
     </>
   );
 }
