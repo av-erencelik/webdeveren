@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 #__next {
-  min-height: 100vh;
+  min-height: 200vh;
   display: flex;
   flex-direction: column;
   @apply bg-earth-50 dark:bg-night;
+}
+html {
+  @apply scroll-smooth !important;
 }

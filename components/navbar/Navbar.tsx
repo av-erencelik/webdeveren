@@ -1,15 +1,28 @@
 import { cn } from "@/utils/utils";
 import Image from "next/image";
 import Link from "next/link";
-import DarkModeToggle from "../Buttons/DarkModeToggle";
-import PageLink from "../Buttons/PageLink";
+import { useEffect, useState } from "react";
+import DarkModeToggle from "../buttons/DarkModeToggle";
+import PageLink from "../buttons/PageLink";
 const Navbar = () => {
+  const [showShadow, setShowShadow] = useState(false);
+  useEffect(() => {
+    const onScroll = function () {
+      if (window.scrollY >= 150) {
+        setShowShadow(true);
+      } else {
+        setShowShadow(false);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
     <div
       className={cn(
-        "fixed top-0 left-0 flex w-full items-center justify-between bg-earth-50 py-3 pl-5 pr-10 shadow-md dark:bg-night/90 dark:shadow-sm dark:shadow-zinc-900"
+        "fixed top-0 left-0 z-40 flex w-full items-center justify-between bg-earth-50 py-2 pl-5 pr-10  transition-all dark:bg-night/90",
+        showShadow && "-top-3 shadow-md dark:shadow-sm dark:shadow-zinc-900"
       )}
-      id="home"
     >
       <Link href="#home">
         <Image src="/logo.png" alt="logo" width={100} height={100} />

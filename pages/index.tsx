@@ -1,7 +1,8 @@
 import Navbar from "@/components/navbar/Navbar";
 import { cn } from "@/utils/utils";
 import Head from "next/head";
-
+import HeroImage from "@/components/hero/HeroImage";
+import HeroText from "@/components/hero/HeroText";
 export default function Home() {
   return (
     <>
@@ -15,6 +16,15 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Navbar />
+      <main className=" mx-auto h-screen w-full max-w-[1280px]">
+        <section className="flex h-[1000px] w-full items-center gap-32" id="home">
+          <div className=" max-w-[50%]">
+            <HeroText />
+          </div>
+
+          <HeroImage />
+        </section>
+      </main>
     </>
   );
 }
