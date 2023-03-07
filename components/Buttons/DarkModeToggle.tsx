@@ -42,9 +42,9 @@ const DarkModeToggle = () => {
         viewBox="0 0 24 24"
         fill="none"
         stroke={isDarkMode ? "currentColor" : "black"}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         animate={{ transform }}
         transition={{ type: "spring", stiffness: 75 }}
         style={{ cursor: "pointer" }}
