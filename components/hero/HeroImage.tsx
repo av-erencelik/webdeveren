@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
-
+import { motion } from "framer-motion";
+import Image from "next/image";
 const HeroImage = () => {
   return (
     <FadeInWhenVisible>
       <motion.div
+        className="bg-transparent"
         variants={{
           offscreen: {
             y: -200,
@@ -15,23 +16,22 @@ const HeroImage = () => {
             opacity: 1,
             transition: {
               type: "tween",
-              duration: 2,
+              duration: 4,
             },
           },
         }}
-        className="bg-transparent"
       >
-        <motion.img
-          src="/hero.png"
-          className="w-[500px]"
+        <motion.div
           animate={{ y: [0, -15, 0] }}
           transition={{
             duration: 3,
             ease: "easeInOut",
             repeat: Infinity,
-            delay: 1.9,
+            delay: 3.9,
           }}
-        />
+        >
+          <Image src="/hero.png" className="hidden w-[500px] lg:block" alt="hero" width={500} height={500} />
+        </motion.div>
       </motion.div>
     </FadeInWhenVisible>
   );

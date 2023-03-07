@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${lato.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
