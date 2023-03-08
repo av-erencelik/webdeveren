@@ -3,7 +3,8 @@ import Head from "next/head";
 import HeroImage from "@/components/hero/HeroImage";
 import HeroText from "@/components/hero/HeroText";
 import SocialLinks from "@/components/buttons/SocialLinks";
-import AboutImage from "@/components/image/AboutImage";
+import AboutSection from "@/components/about/AboutSection";
+
 export default function Home() {
   return (
     <>
@@ -24,8 +25,8 @@ export default function Home() {
           </div>
           <HeroImage />
         </section>
-        <section className="flex h-screen w-full items-center lg:gap-10 xl:gap-20" id="about">
-          <AboutImage />
+        <section className="flex w-full flex-col justify-center gap-10 lg:min-h-[700px]" id="about">
+          <AboutSection />
         </section>
       </main>
 

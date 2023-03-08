@@ -5,7 +5,7 @@ function FadeInWhenVisible({ children }: { children: ReactNode }) {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
       className="bg-transparent"
     >

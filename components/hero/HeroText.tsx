@@ -53,7 +53,7 @@ const HeroText = () => {
           Mehmet Eren Çelik
         </motion.h1>
         <motion.h1
-          className=" max-w-md  text-cinder-700 dark:text-gray-400"
+          className=" max-w-md  text-justify text-cinder-700 dark:text-gray-400"
           variants={sentence}
           initial="hidden"
           animate="visible"

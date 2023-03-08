@@ -1,12 +1,15 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Pp from "../../public/pp.png";
+const leftIn = {
+  offscreen: { x: -200 },
+  onscreen: { x: 0, transition: { duration: 1 } },
+};
 const AboutImage = () => {
   return (
-    <div className="relative block w-full max-w-[300px] overflow-hidden rounded-md ">
-      <Image src={Pp} alt="pp" className=" object-cover" width={300} height={300} />
-
-      {/* <div className="h-[250px] w-[250px] rounded-md bg-earth-300/80 bg-[url('/pp.jpeg')] bg-cover bg-blend-overlay"></div> */}
-    </div>
+    <motion.div className="block w-full max-w-[300px] overflow-hidden rounded-md" variants={leftIn}>
+      <Image src={Pp} alt="pp" className="rounded-md object-cover" width={300} height={300} />
+    </motion.div>
   );
 };
 

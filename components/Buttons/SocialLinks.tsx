@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin, FileText } from "lucide-react";
+import { Github, Twitter, Linkedin, FileText, Mail } from "lucide-react";
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -47,6 +47,15 @@ const SocialLinks = () => {
       id: 4,
       child: (
         <>
+          Mail <Mail size={20} />
+        </>
+      ),
+      href: "mailto:av.erencelik@gmail.com",
+    },
+    {
+      id: 5,
+      child: (
+        <>
           Resume <FileText size={20} />
         </>
       ),
@@ -62,7 +71,7 @@ const SocialLinks = () => {
           <motion.li
             variants={itemUp}
             className={
-              "ml-[-70px] flex h-10 w-32 items-center justify-between bg-transparent px-4 text-cinder-700 duration-300 hover:ml-[-10px] hover:text-earth-300  dark:text-gray-400" +
+              "ml-[-70px] flex h-10 w-32 items-center justify-between bg-transparent px-4 text-cinder-700 duration-300 hover:ml-[-10px] hover:text-earth-300  dark:text-gray-400 dark:hover:text-earth-300" +
               " " +
               style
             }
