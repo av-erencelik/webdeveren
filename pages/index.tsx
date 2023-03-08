@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Head from "next/head";
 import HeroImage from "@/components/hero/HeroImage";
 import HeroText from "@/components/hero/HeroText";
+import SocialLinks from "@/components/buttons/SocialLinks";
 export default function Home() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function Home() {
           <HeroImage />
         </section>
       </main>
+      <SocialLinks />
     </>
   );
 }
