@@ -3,6 +3,7 @@ import Head from "next/head";
 import HeroImage from "@/components/hero/HeroImage";
 import HeroText from "@/components/hero/HeroText";
 import SocialLinks from "@/components/buttons/SocialLinks";
+import AboutImage from "@/components/image/AboutImage";
 export default function Home() {
   return (
     <>
@@ -17,13 +18,17 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className="mx-auto min-h-screen w-full max-w-[1500px] px-10 lg:px-28">
-        <section className="flex h-screen w-full items-center lg:gap-10 xl:gap-20" id="home">
+        <section className="flex h-screen w-full items-center justify-between lg:gap-10 xl:gap-20" id="home">
           <div className="lg:max-w-[50%]">
             <HeroText />
           </div>
           <HeroImage />
         </section>
+        <section className="flex h-screen w-full items-center lg:gap-10 xl:gap-20" id="about">
+          <AboutImage />
+        </section>
       </main>
+
       <SocialLinks />
     </>
   );

@@ -62,7 +62,7 @@ const SocialLinks = () => {
           <motion.li
             variants={itemUp}
             className={
-              "ml-[-70px] flex h-10 w-32 items-center justify-between bg-transparent px-4 duration-300 hover:ml-[-10px]" +
+              "ml-[-70px] flex h-10 w-32 items-center justify-between bg-transparent px-4 text-cinder-700 duration-300 hover:ml-[-10px] hover:text-earth-300  dark:text-gray-400" +
               " " +
               style
             }
@@ -70,7 +70,7 @@ const SocialLinks = () => {
           >
             <a
               href={href}
-              className="flex w-full items-center justify-between text-sm font-semibold text-cinder-700 dark:text-gray-400"
+              className="flex w-full items-center justify-between text-sm font-semibold "
               download={download}
               target="_blank"
               rel="noreferrer"

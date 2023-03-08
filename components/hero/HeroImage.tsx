@@ -30,7 +30,7 @@ const HeroImage = () => {
             delay: 3.9,
           }}
         >
-          <Image src="/hero.png" className="hidden w-[500px] lg:block" alt="hero" width={500} height={500} />
+          <Image src="/hero.png" className="hidden w-[400px] lg:block" alt="hero" width={400} height={400} />
         </motion.div>
       </motion.div>
     </FadeInWhenVisible>
