@@ -41,11 +41,11 @@ const HeroText = () => {
   return (
     <FadeInWhenVisible>
       <div className="flex flex-col items-start justify-center gap-2 text-earth-300">
-        <motion.h3 className="text-earth-300" variants={itemUp} initial="hidden" animate="show">
+        <motion.h3 className="text-cinder-700 dark:text-gray-400" variants={itemUp} initial="hidden" animate="show">
           Hi, my name is
         </motion.h3>
         <motion.h1
-          className="text-[8vw] font-bold text-cinder-600 dark:text-gray-300 lg:text-[4vw] 2xl:text-7xl"
+          className="text-[8vw] font-bold text-earth-300 lg:text-[4vw] 2xl:text-7xl"
           variants={item}
           initial="hidden"
           animate="show"
@@ -53,7 +53,7 @@ const HeroText = () => {
           Mehmet Eren Çelik
         </motion.h1>
         <motion.h1
-          className=" max-w-md  text-cinder-900 dark:text-gray-400"
+          className=" max-w-md  text-cinder-700 dark:text-gray-400"
           variants={sentence}
           initial="hidden"
           animate="visible"
