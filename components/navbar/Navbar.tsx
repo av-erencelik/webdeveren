@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import DarkModeToggle from "../buttons/DarkModeToggle";
 import PageLink from "../buttons/PageLink";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -37,7 +38,7 @@ const Navbar = () => {
     <FadeInWhenVisible>
       <motion.div
         className={cn(
-          "fixed top-0 left-0 z-40 flex w-full items-center justify-between bg-earth-50/90 p-2 pr-5 transition-all  dark:bg-cinder-900/90 lg:pl-5 lg:pr-10",
+          "fixed top-0 right-0 z-40 flex w-full items-center justify-between bg-earth-50/90 p-2 pr-5 transition-all  dark:bg-cinder-900/90 lg:pl-5 lg:pr-10",
           showShadow && "-top-3 shadow-md dark:shadow-sm dark:shadow-zinc-900"
         )}
         variants={container}
@@ -52,6 +53,9 @@ const Navbar = () => {
           <motion.ul className="flex gap-5" variants={container} initial="hidden" animate="show">
             <motion.li className="hidden md:block" variants={itemUp}>
               <PageLink to="about" />
+            </motion.li>
+            <motion.li className="hidden md:block" variants={itemUp}>
+              <PageLink to="skills" />
             </motion.li>
             <motion.li className="hidden md:block" variants={itemUp}>
               <PageLink to="projects" />
@@ -78,6 +82,7 @@ const Navbar = () => {
           </motion.ul>
         </motion.nav>
       </motion.div>
+      <div></div>
     </FadeInWhenVisible>
   );
 };

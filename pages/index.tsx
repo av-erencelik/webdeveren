@@ -4,6 +4,7 @@ import HeroImage from "@/components/hero/HeroImage";
 import HeroText from "@/components/hero/HeroText";
 import SocialLinks from "@/components/buttons/SocialLinks";
 import AboutSection from "@/components/about/AboutSection";
+import MobileMenu from "@/components/navbar/MobileMenu";
 
 export default function Home() {
   return (
@@ -29,8 +30,8 @@ export default function Home() {
           <AboutSection />
         </section>
       </main>
-
       <SocialLinks />
+      <MobileMenu />
     </>
   );
 }
