@@ -5,6 +5,7 @@ import HeroText from "@/components/hero/HeroText";
 import SocialLinks from "@/components/buttons/SocialLinks";
 import AboutSection from "@/components/about/AboutSection";
 import MobileMenu from "@/components/navbar/MobileMenu";
+import SkillsSection from "@/components/skills/SkillsSection";
 
 export default function Home() {
   return (
@@ -26,8 +27,11 @@ export default function Home() {
           </div>
           <HeroImage />
         </section>
-        <section className="flex w-full flex-col justify-center gap-10 lg:min-h-[700px]" id="about">
+        <section className="flex min-h-[700px] w-full flex-col justify-center gap-10" id="about">
           <AboutSection />
+        </section>
+        <section className="flex min-h-[900px] w-full flex-col justify-center gap-10" id="skills">
+          <SkillsSection />
         </section>
       </main>
       <SocialLinks />

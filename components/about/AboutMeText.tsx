@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 const rightIn = {
   offscreen: { x: 200 },
-  onscreen: { x: 0, transition: { duration: 1 } },
+  onscreen: { x: 0, transition: { duration: 1, ease: "easeInOut" } },
 };
 
 const AboutMeText = () => {

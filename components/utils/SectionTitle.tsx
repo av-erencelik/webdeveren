@@ -6,6 +6,7 @@ const progress = {
     width: "100%",
     transition: {
       duration: 1.5,
+      ease: "easeInOut",
     },
   },
 };

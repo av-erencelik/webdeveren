@@ -3,16 +3,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CgMenuGridR } from "react-icons/cg";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
+import { LayoutGrid, X } from "lucide-react";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <button
-        className="fixed bottom-2 right-2 block text-earth-300 md:hidden"
+        className="fixed bottom-4 right-4 block text-earth-300 md:hidden"
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <CgMenuGridR size={24} />
+        <LayoutGrid size={24} />
       </button>
       <div
         className={cn(
@@ -43,8 +44,8 @@ const MobileMenu = () => {
               <a className="my-auto w-1/3 text-center font-semibold" href="#contact">
                 Contact
               </a>
-              <button onClick={() => setIsOpen((prev) => !prev)} className="absolute bottom-2 right-2 text-earth-300">
-                <RxCross2 size={24} />
+              <button onClick={() => setIsOpen((prev) => !prev)} className="absolute bottom-4 right-4 text-earth-300">
+                <X size={24} />
               </button>
             </motion.div>
           )}
