@@ -35,7 +35,7 @@ const MobileMenu = () => {
               <a className="my-auto w-1/3 text-center font-semibold" href="#skills">
                 Skills
               </a>
-              <a className="my-auto w-1/3 text-center font-semibold" href="#project">
+              <a className="my-auto w-1/3 text-center font-semibold" href="#projects">
                 Projects
               </a>
               <a className="my-auto w-1/3 text-center font-semibold" href="#blog">

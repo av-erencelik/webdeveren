@@ -6,6 +6,7 @@ import SocialLinks from "@/components/buttons/SocialLinks";
 import AboutSection from "@/components/about/AboutSection";
 import MobileMenu from "@/components/navbar/MobileMenu";
 import SkillsSection from "@/components/skills/SkillsSection";
+import ProjectsSection from "@/components/projects/ProjectsSection";
 
 export default function Home() {
   return (
@@ -32,6 +33,12 @@ export default function Home() {
         </section>
         <section className="flex min-h-[900px] w-full flex-col justify-center gap-10" id="skills">
           <SkillsSection />
+        </section>
+        <section
+          className="flex min-h-[2000px] w-full flex-col justify-center gap-5 lg:min-h-[1500px] xl:gap-10"
+          id="projects"
+        >
+          <ProjectsSection />
         </section>
       </main>
       <SocialLinks />

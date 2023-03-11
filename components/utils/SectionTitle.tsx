@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import FadeInWhenVisible from "./FadeInWhenVisible";
+
 const progress = {
   offscreen: { width: 0 },
   onscreen: {

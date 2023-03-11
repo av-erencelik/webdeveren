@@ -64,7 +64,7 @@ const Navbar = () => {
               <PageLink to="blog" />
             </motion.li>
             <motion.li className="hidden md:block" variants={itemUp}>
-              <PageLink to="Contact" />
+              <PageLink to="contact" />
             </motion.li>
             <motion.li className="flex items-center" variants={itemUp}>
               <DarkModeToggle />
