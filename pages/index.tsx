@@ -12,6 +12,7 @@ import { client } from "@/libs/sanity.client";
 import { PreviewSuspense } from "next-sanity/preview";
 import PreviewHomePage from "@/components/studio/preview/PreviewHomePage";
 import BlogSection from "@/components/blog/BlogSection";
+import ContactSection from "@/components/contact/ContactSection";
 export default function Home({ preview, data }: { preview: boolean; data: Post[] }) {
   if (preview) {
     return (
@@ -57,11 +58,11 @@ export default function Home({ preview, data }: { preview: boolean; data: Post[]
         >
           <ProjectsSection />
         </section>
-        <section
-          className="flex min-h-[1000px] w-full flex-col justify-center gap-5 lg:min-h-[1000px] xl:gap-10"
-          id="blog"
-        >
+        <section className="flex min-h-[1000px] w-full flex-col justify-center gap-5 xl:gap-10" id="blog">
           <BlogSection data={data} />
+        </section>
+        <section className="flex min-h-[600px] w-full flex-col justify-center gap-5 xl:gap-10" id="contact">
+          <ContactSection />
         </section>
       </main>
       <SocialLinks />
