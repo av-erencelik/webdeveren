@@ -39,7 +39,7 @@ const Navbar = () => {
       <motion.div
         className={cn(
           "fixed top-0 right-0 z-40 flex w-full items-center justify-between bg-earth-50/90 p-2 pr-5 transition-all  dark:bg-cinder-900/90 lg:pl-5 lg:pr-10",
-          showShadow && "-top-3 shadow-md dark:shadow-sm dark:shadow-zinc-900"
+          showShadow && "-top-3 shadow-md transition-colors duration-500 dark:shadow-sm dark:shadow-zinc-900"
         )}
         variants={container}
         initial="hidden"

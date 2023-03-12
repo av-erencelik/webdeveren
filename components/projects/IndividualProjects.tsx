@@ -22,7 +22,7 @@ const IndividualProjects = ({ hrefs, name, src, description, techs, reverse }: P
   return (
     <>
       <motion.a
-        className=" block cursor-pointer text-center text-2xl font-bold text-cinder-700 underline transition-colors hover:text-earth-300 dark:text-gray-400 dark:hover:text-earth-300 lg:hidden lg:text-right"
+        className=" block cursor-pointer text-center text-2xl font-bold text-cinder-700 underline transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300 lg:hidden lg:text-right"
         href={hrefs.demo}
         target="_blank"
         rel="noreferrer"
@@ -46,7 +46,7 @@ const IndividualProjects = ({ hrefs, name, src, description, techs, reverse }: P
       >
         <a
           className={cn(
-            "hidden cursor-pointer text-center text-2xl font-bold text-cinder-700 underline transition-colors hover:text-earth-300 dark:text-gray-400 dark:hover:text-earth-300 lg:block lg:text-right"
+            "hidden cursor-pointer text-center text-2xl font-bold text-cinder-700 underline transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300 lg:block lg:text-right"
           )}
           href={hrefs.demo}
           target="_blank"
@@ -72,7 +72,7 @@ const IndividualProjects = ({ hrefs, name, src, description, techs, reverse }: P
             href={hrefs.demo}
             target="_blank"
             rel="noreferrer"
-            className="text-cinder-700 transition-colors hover:text-earth-300 dark:text-gray-400 dark:hover:text-earth-300"
+            className="text-cinder-700 transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300"
           >
             <ScreenShare size={20} />
           </a>
@@ -80,7 +80,7 @@ const IndividualProjects = ({ hrefs, name, src, description, techs, reverse }: P
             href={hrefs.code}
             target="_blank"
             rel="noreferrer"
-            className="text-cinder-700 transition-colors hover:text-earth-300 dark:text-gray-400 dark:hover:text-earth-300"
+            className="text-cinder-700 transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300"
           >
             <Code2 size={20} />
           </a>

@@ -52,7 +52,7 @@ const projects: ProjectType[] = [
 const ProjectsSection = () => {
   return (
     <FadeInWhenVisible>
-      <motion.div className="flex flex-col justify-center gap-20" variants={itemDown}>
+      <motion.div className="flex flex-col justify-center gap-10" variants={itemDown}>
         <SectionTitle title="Projects" />
         {projects.map((project, index) => (
           <FadeInWhenVisible key={index}>

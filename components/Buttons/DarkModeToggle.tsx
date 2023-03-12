@@ -1,12 +1,19 @@
+import useFirstRender from "@/utils/useFirstRender";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 motion;
 
 const DarkModeToggle = () => {
-  const [isDarkMode, toggle] = useState(
-    typeof window !== "undefined" ? (localStorage.getItem("theme") === "light" ? false : true) : true
-  );
+  const [isDarkMode, toggle] = useState(true);
+  const isFirst = useFirstRender();
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "light") {
+      toggle(false);
+    } else {
+      document.body.classList.add("dark");
+    }
+  }, []);
 
   const properties = {
     sun: {
@@ -26,13 +33,17 @@ const DarkModeToggle = () => {
   };
   const { r, transform, cx, cy, opacity } = isDarkMode ? properties["moon"] : properties["sun"];
   useEffect(() => {
+    if (isFirst) {
+      return;
+    }
+
     if (!isDarkMode) {
       localStorage.setItem("theme", "light");
     } else {
       localStorage.removeItem("theme");
     }
     document.body.classList.toggle("dark", isDarkMode);
-  }, [isDarkMode]);
+  }, [isDarkMode, isFirst]);
   return (
     <button className="dark:text-earth-300">
       <motion.svg
@@ -59,7 +70,7 @@ const DarkModeToggle = () => {
             cx="12"
             cy="4"
             r="9"
-            fill="black"
+            fill={isDarkMode ? "currentColor" : "black"}
             transition={{ type: "spring", stiffness: 75 }}
           />
         </mask>

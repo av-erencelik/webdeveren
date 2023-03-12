@@ -5,7 +5,7 @@
 #__next {
   display: flex;
   flex-direction: column;
-  @apply overflow-hidden bg-earth-50 dark:bg-cinder-900;
+  @apply overflow-hidden bg-earth-50 transition-colors duration-500 dark:bg-cinder-900;
 }
 html {
   @apply scroll-smooth !important;
