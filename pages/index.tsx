@@ -38,7 +38,6 @@ export default function Home({ preview, data }: { preview: boolean; data: Post[]
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Navbar />
       <main className="mx-auto min-h-screen w-full max-w-[1500px] px-8 lg:px-28">
         <section className="flex h-screen w-full items-center justify-between lg:gap-10 xl:gap-20" id="home">
           <div className="lg:max-w-[50%]">

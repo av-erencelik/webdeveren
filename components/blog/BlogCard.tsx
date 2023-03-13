@@ -23,9 +23,8 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
         <Image
           src={urlFor(post.mainImage).url()}
           alt={post.slug.current}
-          objectFit="cover"
           fill
-          className="h-full transition-all duration-300 hover:scale-105"
+          className="h-full object-cover transition-all duration-300 hover:scale-105"
         />
       </Link>
       <div className="flex flex-col gap-1 px-5 pb-5">
@@ -47,7 +46,7 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
         <p className="text-sm text-gray-400 line-clamp-2 dark:text-gray-400">{post.description}</p>
         <Link href={`/blog/${post.slug.current}`} className="ml-auto">
           <p className="flex items-center text-sm font-semibold text-cinder-700 transition-all duration-200 hover:text-earth-300 hover:underline dark:text-earth-50 dark:hover:text-earth-300">
-            Read more <ArrowUpRight size={16} />
+            Read More <ArrowUpRight size={16} />
           </p>
         </Link>
       </div>

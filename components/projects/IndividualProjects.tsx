@@ -22,7 +22,7 @@ const IndividualProjects = ({ hrefs, name, src, description, techs, reverse }: P
   return (
     <>
       <motion.a
-        className=" block cursor-pointer text-center text-2xl font-bold text-cinder-700 underline transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300 lg:hidden lg:text-right"
+        className=" block cursor-pointer text-center text-2xl font-bold text-cinder-900 underline transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300 lg:hidden lg:text-right"
         href={hrefs.demo}
         target="_blank"
         rel="noreferrer"
@@ -46,7 +46,7 @@ const IndividualProjects = ({ hrefs, name, src, description, techs, reverse }: P
       >
         <a
           className={cn(
-            "hidden cursor-pointer text-center text-2xl font-bold text-cinder-700 underline transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300 lg:block lg:text-right"
+            "hidden cursor-pointer text-center text-2xl font-bold text-cinder-900 underline transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300 lg:block lg:text-right"
           )}
           href={hrefs.demo}
           target="_blank"

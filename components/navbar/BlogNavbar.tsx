@@ -1,9 +1,9 @@
 import { cn } from "@/utils/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import DarkModeToggle from "../buttons/DarkModeToggle";
+
+import { ReactNode, useEffect, useState } from "react";
+
 import PageLink from "../buttons/PageLink";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 
@@ -21,7 +21,7 @@ const itemUp = {
   show: { opacity: 1, y: 0, transition: { type: "tween", duration: 1 } },
 };
 
-const Navbar = () => {
+const BlogNavbar = () => {
   const [showShadow, setShowShadow] = useState(false);
   useEffect(() => {
     const onScroll = function () {
@@ -51,33 +51,11 @@ const Navbar = () => {
 
         <motion.nav variants={itemUp}>
           <motion.ul className="flex gap-5" variants={container} initial="hidden" animate="show">
-            <motion.li className="hidden md:block" variants={itemUp}>
-              <PageLink to="#about" name="About" />
+            <motion.li variants={itemUp}>
+              <PageLink to="/" name="Home" />
             </motion.li>
-            <motion.li className="hidden md:block" variants={itemUp}>
-              <PageLink to="#skills" name="Skills" />
-            </motion.li>
-            <motion.li className="hidden md:block" variants={itemUp}>
-              <PageLink to="#projects" name="Projects" />
-            </motion.li>
-            <motion.li className="hidden md:block" variants={itemUp}>
-              <PageLink to="#blog" name="Blog" />
-            </motion.li>
-            <motion.li className="hidden md:block" variants={itemUp}>
-              <PageLink to="#contact" name="Contact" />
-            </motion.li>
-            <motion.li className="flex items-center" variants={itemUp}>
-              <DarkModeToggle />
-            </motion.li>
-
-            <motion.li className="flex items-center text-sm font-thin text-earth-300" variants={itemUp}>
-              <span className="cursor-pointer font-semibold text-earth-300">
-                <Link href="/">En</Link>
-              </span>
-              /
-              <span className="cursor-pointer text-gray-400 transition-all hover:text-earth-300">
-                <Link href="/">Tr</Link>
-              </span>
+            <motion.li variants={itemUp}>
+              <PageLink to="/blog" name="Posts" />
             </motion.li>
           </motion.ul>
         </motion.nav>
@@ -87,4 +65,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BlogNavbar;

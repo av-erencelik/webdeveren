@@ -44,7 +44,7 @@ const projects: ProjectType[] = [
     name: "GamingRealm",
     src: gaming,
     description:
-      "GamingRealm is a website, powered by Rawg.io API, allows users to browse, favorite, and comment on games, connecting them with a community of gaming enthusiasts.",
+      "GamingRealm is a website, powered by Rawg.io api, allows users to browse, favorite, and comment on games, connecting them with a community of gaming enthusiasts.",
     techs: ["React.js", " JavaScript", "Tailwind", "Redux", "Firebase"],
     reverse: false,
   },
