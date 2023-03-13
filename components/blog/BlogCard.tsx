@@ -52,7 +52,7 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
         </Link>
       </div>
       {post.featured && (
-        <span className="absolute top-[15px] right-[-50px] flex h-[22px] w-[150px] rotate-45 items-end justify-center bg-earth-300 pb-[0.15rem] text-xs font-semibold tracking-wider text-earth-50">
+        <span className="absolute top-[15px] right-[-50px] flex h-[22px] w-[150px] rotate-45 items-end justify-center bg-earth-300 pb-[0.15rem] text-xs font-semibold tracking-wider text-earth-50 dark:bg-cinder-700 dark:text-earth-300">
           Featured
         </span>
       )}
