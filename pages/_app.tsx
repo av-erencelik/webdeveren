@@ -18,6 +18,18 @@ export default function App({ Component, pageProps, router }: AppProps) {
         </BlogLayout>
       </>
     );
+  } else if (router.pathname.startsWith("/studio")) {
+    return (
+      <>
+        <style jsx global>{`
+          html {
+            font-family: ${lato.style.fontFamily};
+          }
+        `}</style>
+
+        <Component {...pageProps} />
+      </>
+    );
   }
   return (
     <>

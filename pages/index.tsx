@@ -1,8 +1,6 @@
-import Navbar from "@/components/navbar/Navbar";
 import Head from "next/head";
 import HeroImage from "@/components/hero/HeroImage";
 import HeroText from "@/components/hero/HeroText";
-import SocialLinks from "@/components/buttons/SocialLinks";
 import AboutSection from "@/components/about/AboutSection";
 import MobileMenu from "@/components/navbar/MobileMenu";
 import SkillsSection from "@/components/studio/skills/SkillsSection";
@@ -64,17 +62,16 @@ export default function Home({ preview, data }: { preview: boolean; data: Post[]
           <ContactSection />
         </section>
       </main>
-      <SocialLinks />
       <MobileMenu />
     </>
   );
 }
 const query = groq`
-*[_type=='post'][0...2]{slug,title,description,mainImage,publishedAt,categories} {
+*[_type=='post']{slug,title,description,mainImage,publishedAt,categories,featured} {
   ...,
   author->,
   categories[]->
- } | order(_createdAt desc)
+ } | order(publishedAt desc)[0..1]
 `;
 export const getStaticProps = async ({ preview = false }) => {
   if (preview) {

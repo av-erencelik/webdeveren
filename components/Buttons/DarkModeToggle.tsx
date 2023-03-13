@@ -2,8 +2,6 @@ import useFirstRender from "@/utils/useFirstRender";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-motion;
-
 const DarkModeToggle = () => {
   const [isDarkMode, toggle] = useState(true);
   const isFirst = useFirstRender();

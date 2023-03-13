@@ -7,11 +7,11 @@ const HeroImage = () => {
       <motion.div
         className="bg-transparent"
         variants={{
-          offscreen: {
+          initial: {
             y: -200,
             opacity: 0,
           },
-          onscreen: {
+          show: {
             y: 0,
             opacity: 1,
             transition: {
@@ -20,6 +20,8 @@ const HeroImage = () => {
             },
           },
         }}
+        initial="initial"
+        animate="show"
       >
         <motion.div
           animate={{ y: [0, -15, 0] }}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { ReactNode, useEffect, useState } from "react";
+import DarkModeToggle from "../buttons/DarkModeToggle";
 
 import PageLink from "../buttons/PageLink";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
@@ -45,7 +46,7 @@ const BlogNavbar = () => {
         initial="hidden"
         animate="show"
       >
-        <motion.a href="#home" variants={itemUp}>
+        <motion.a href="/" variants={itemUp}>
           <Image src="/logo.png" alt="logo" width={100} height={100} />
         </motion.a>
 
@@ -56,6 +57,9 @@ const BlogNavbar = () => {
             </motion.li>
             <motion.li variants={itemUp}>
               <PageLink to="/blog" name="Posts" />
+            </motion.li>
+            <motion.li className="flex items-center" variants={itemUp}>
+              <DarkModeToggle />
             </motion.li>
           </motion.ul>
         </motion.nav>

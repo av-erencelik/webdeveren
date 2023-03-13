@@ -1,6 +1,3 @@
-import { FileText, Github, Linkedin, Twitter } from "lucide-react";
-import Image from "next/image";
-
 const Footer = () => {
   return (
     <footer className="flex flex-col-reverse items-center justify-center gap-4 p-5 md:flex-row md:py-3 md:px-20">

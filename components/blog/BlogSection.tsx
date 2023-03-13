@@ -21,7 +21,7 @@ const BlogSection = ({ data }: { data: Post[] }) => {
         <SectionTitle title="Latest Blog Posts" />
         <div className="flex flex-col items-center justify-center gap-5 md:flex-row md:gap-20">
           {data.map((post, index) => (
-            <FadeInWhenVisible key={post.slug.current}>
+            <FadeInWhenVisible key={post.slug.current} className="h-[350px] w-full md:h-[450px] md:w-1/2">
               <BlogCard post={post} index={index} />
             </FadeInWhenVisible>
           ))}
