@@ -11,7 +11,7 @@ const Blog = ({ preview, data }: { preview: boolean; data: Post[] }) => {
   return (
     <>
       <Head>
-        <title>Web Dev Eren</title>
+        <title>Web Dev Eren - Blog</title>
         <meta
           name="description"
           content="Join me on my web development journey and discover the intersection of code and creativity. From personal stories to tech tips, my blog has something for everyone."
