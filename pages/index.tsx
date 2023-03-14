@@ -3,7 +3,7 @@ import HeroImage from "@/components/hero/HeroImage";
 import HeroText from "@/components/hero/HeroText";
 import AboutSection from "@/components/about/AboutSection";
 import MobileMenu from "@/components/navbar/MobileMenu";
-import SkillsSection from "@/components/studio/skills/SkillsSection";
+import SkillsSection from "@/components/skills/SkillsSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import { groq } from "next-sanity";
 import { client } from "@/libs/sanity.client";

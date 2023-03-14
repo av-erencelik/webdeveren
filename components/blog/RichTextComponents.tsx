@@ -1,17 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import urlFor from "../../libs/urlFor";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import getSlug from "speakingurl";
-
+import js from "react-syntax-highlighter/dist/cjs/languages/hljs/javascript";
+import ts from "react-syntax-highlighter/dist/cjs/languages/hljs/typescript";
+import css from "react-syntax-highlighter/dist/cjs/languages/hljs/css";
+import csharp from "react-syntax-highlighter/dist/cjs/languages/hljs/csharp";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+SyntaxHighlighter.registerLanguage("javascript", js);
+SyntaxHighlighter.registerLanguage("typescript", ts);
+SyntaxHighlighter.registerLanguage("css", css);
+SyntaxHighlighter.registerLanguage("csharp", csharp);
 export const RichTextComponents = {
   types: {
     image: ({ value }: any) => {
       return (
-        <div className="relative m-5 mx-auto w-[93vw] md:w-full">
+        <div className="relative m-5 mx-auto w-[93vw] p-4 md:w-full">
           <Image
-            className="h-full object-contain"
+            className="h-full rounded-md object-contain"
             src={urlFor(value).url()}
             alt="Blog Post Image"
             height={400}
@@ -22,7 +29,7 @@ export const RichTextComponents = {
     },
     myCodeField: ({ value }: any) => {
       return (
-        <div className="w-[100vw] text-sm md:w-full md:text-base lg:text-lg">
+        <div className="w-[100vw] p-4 text-sm md:w-full md:text-base lg:text-lg">
           <SyntaxHighlighter language={value.language} style={nightOwl}>
             {value.code}
           </SyntaxHighlighter>

@@ -40,7 +40,7 @@ const PreviewPostPage = ({ query, slug }: { query: string; slug: string }) => {
         categories={data.categories}
       />
 
-      <main className="mx-auto w-full max-w-[1500px] flex-1 overflow-visible px-8 py-2 lg:px-28">
+      <main className="mx-auto w-full max-w-[1500px] flex-1 overflow-visible px-0 py-2 lg:px-28">
         <FadeInWhenVisible>
           <Divider />
         </FadeInWhenVisible>
@@ -52,7 +52,7 @@ const PreviewPostPage = ({ query, slug }: { query: string; slug: string }) => {
           >
             <BlogPost data={data} />
             <div className="sticky top-28 hidden h-[300px] overflow-auto p-5 xl:block">
-              <h3 className="mb-3 text-lg text-cinder-700">TABLE OF CONTENTS</h3>
+              <h3 className="mb-3 text-lg text-cinder-700 dark:text-gray-400">TABLE OF CONTENTS</h3>
               <TableOfContents outline={outline} activeId={activeId} />
             </div>
           </motion.div>

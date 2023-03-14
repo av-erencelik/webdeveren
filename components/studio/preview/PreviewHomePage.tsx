@@ -6,7 +6,7 @@ import HeroText from "@/components/hero/HeroText";
 import SocialLinks from "@/components/buttons/SocialLinks";
 import AboutSection from "@/components/about/AboutSection";
 import MobileMenu from "@/components/navbar/MobileMenu";
-import SkillsSection from "@/components/studio/skills/SkillsSection";
+import SkillsSection from "@/components/skills/SkillsSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import BlogSection from "@/components/blog/BlogSection";
 import ContactSection from "@/components/contact/ContactSection";

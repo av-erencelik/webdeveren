@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import FadeInWhenVisible from "../../utils/FadeInWhenVisible";
-import SectionTitle from "../../utils/SectionTitle";
+import FadeInWhenVisible from "../utils/FadeInWhenVisible";
+import SectionTitle from "../utils/SectionTitle";
 import Skills from "./Skills";
 
 const itemDown = {

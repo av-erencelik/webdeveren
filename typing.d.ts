@@ -59,3 +59,18 @@ interface Title {
   _type: string;
   current: string;
 }
+interface Heading extends HeadingBase {
+  children: HeadingChildren[];
+  markDefs: [];
+  style: "h1" | "h2" | "h3" | "h4";
+  slug?: string;
+  subheadings?: Heading[];
+}
+interface HeadingBase {
+  _key: string;
+  _type: string;
+}
+interface HeadingChildren extends HeadingBase {
+  marks: [];
+  text: string;
+}

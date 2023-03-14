@@ -8,7 +8,7 @@
   @apply min-h-screen justify-between overflow-visible bg-earth-50 transition-colors duration-500 dark:bg-cinder-900;
 }
 html {
-  @apply scroll-smooth !important;
+  @apply scroll-smooth;
 }
 h1,
 h2,
@@ -16,8 +16,9 @@ h3,
 h4 {
   scroll-margin-top: 50px;
 }
-/* pre {
-  display: inline-block;
-  max-width: 800px;
-  overflow-x: auto;
-} */
+pre {
+  border-radius: 7px;
+}
+a:link {
+  scroll-behavior: auto !important;
+}

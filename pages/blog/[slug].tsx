@@ -13,7 +13,17 @@ import { PreviewSuspense } from "next-sanity/preview";
 import Head from "next/head";
 import { useState } from "react";
 
-const Post = ({ preview, data, slug, headings }: { preview: boolean; data: Post; slug: string; headings: any }) => {
+const Post = ({
+  preview,
+  data,
+  slug,
+  headings,
+}: {
+  preview: boolean;
+  data: Post;
+  slug: string;
+  headings: Heading[];
+}) => {
   const [activeId, setActiveId] = useState("");
   useIntersectionObserver(setActiveId);
   if (preview) {
@@ -29,7 +39,7 @@ const Post = ({ preview, data, slug, headings }: { preview: boolean; data: Post;
       </PreviewSuspense>
     );
   }
-  const outline = parseOutline(headings.headings);
+  const outline = parseOutline(headings);
   return (
     <>
       <Head>
@@ -87,10 +97,10 @@ export const getStaticProps = async ({ preview = false, params }: { preview: boo
     return { props: { preview, slug } };
   }
 
-  const data = await client.fetch(query, { slug });
-  const headings = await client.fetch(queryHeadings, { slug });
+  const data: Post = await client.fetch(query, { slug });
+  const headings: { headings: Heading[] } = await client.fetch(queryHeadings, { slug });
 
-  return { props: { preview, data, slug, headings }, revalidate: 600 };
+  return { props: { preview, data, slug, headings: headings.headings }, revalidate: 600 };
 };
 export default Post;
 export async function getStaticPaths() {
