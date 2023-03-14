@@ -15,7 +15,7 @@ function FadeInWhenVisible({
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delayChildren: delay }}
-      className={"bg-transparent " + className}
+      className={"bg-transparent " + className ? className : ""}
     >
       {children}
     </motion.div>

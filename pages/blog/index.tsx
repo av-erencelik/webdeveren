@@ -19,7 +19,7 @@ const Blog = ({ preview, data }: { preview: boolean; data: Post[] }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <BlogHero />
-      <main className="mx-auto w-full max-w-[1500px] flex-1 px-8 py-2 lg:px-28">
+      <main className="mx-auto w-full max-w-[1500px] flex-1 overflow-hidden px-8 py-2 lg:px-28">
         <FadeInWhenVisible>
           <Divider />
         </FadeInWhenVisible>
@@ -38,10 +38,6 @@ const query = groq`
  } | order(publishedAt desc)[0...10]
 `;
 export const getStaticProps = async ({ preview = false }) => {
-  if (preview) {
-    return { props: { preview } };
-  }
-
   const data = await client.fetch(query);
 
   return { props: { preview, data }, revalidate: 600 };

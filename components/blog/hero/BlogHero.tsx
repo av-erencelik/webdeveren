@@ -19,22 +19,27 @@ const BlogHero = ({
   description = "Join me on my web development journey and discover the intersection of code and creativity.",
   descriptionFollowUp = true,
   publishedAt,
+  categories,
 }: {
   title?: string;
   description?: string;
   publishedAt?: string;
   descriptionFollowUp?: boolean;
+  categories?: Category[];
 }) => {
   return (
     <FadeInWhenVisible>
-      <motion.section className="mt-[91px] flex h-[200px] w-full items-center lg:h-[300px]" variants={itemUp}>
+      <motion.section
+        className="mt-[91px] flex h-[200px] w-full items-center overflow-hidden lg:h-[300px]"
+        variants={itemUp}
+      >
         <div className=" mx-auto flex w-full max-w-[1500px] items-center justify-between px-8 lg:px-28">
           <div className="flex flex-col gap-3">
-            <motion.h1 className="text-2xl font-bold text-earth-300 lg:text-6xl" variants={itemUp}>
+            <motion.h1 className="text-3xl font-bold text-earth-300 lg:text-6xl" variants={itemUp}>
               {title}
             </motion.h1>
             <motion.h4
-              className="max-w-[800px] text-sm font-semibold text-cinder-700 dark:text-gray-400 lg:text-base"
+              className="max-w-[800px] text-sm font-semibold text-cinder-700 dark:text-gray-400 lg:w-[800px] lg:text-base"
               variants={itemLeft}
             >
               {description}{" "}
@@ -44,16 +49,26 @@ const BlogHero = ({
                 </span>
               )}
             </motion.h4>
-            <motion.p variants={itemLeft} className="text-xs text-cinder-700 dark:text-gray-400">
-              {publishedAt &&
-                new Date(publishedAt).toLocaleDateString("en-EN", {
-                  month: "long",
-                  day: "2-digit",
-                  year: "numeric",
-                })}
-            </motion.p>
+            <div className="flex items-center justify-between">
+              <motion.p variants={itemLeft} className="text-xs text-cinder-700 dark:text-gray-400">
+                {publishedAt &&
+                  new Date(publishedAt).toLocaleDateString("en-EN", {
+                    month: "long",
+                    day: "2-digit",
+                    year: "numeric",
+                  })}
+              </motion.p>
+              <div className="flex gap-2">
+                {categories &&
+                  categories.map((category) => (
+                    <div key={category._id} className="rounded-md bg-earth-300 p-1 px-2 text-xs text-earth-50">
+                      {category.title}
+                    </div>
+                  ))}
+              </div>
+            </div>
           </div>
-          <motion.div variants={itemRight} className="hidden lg:block">
+          <motion.div variants={itemRight} className="hidden xl:block">
             <Image src="/blog.png" alt="blog" width={300} height={300} />
           </motion.div>
         </div>

@@ -8,6 +8,8 @@ import AboutSection from "@/components/about/AboutSection";
 import MobileMenu from "@/components/navbar/MobileMenu";
 import SkillsSection from "@/components/studio/skills/SkillsSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
+import BlogSection from "@/components/blog/BlogSection";
+import ContactSection from "@/components/contact/ContactSection";
 
 const PreviewHomePage = ({ query }: { query: string }) => {
   const data: Post[] = usePreview(null, query);
@@ -23,7 +25,7 @@ const PreviewHomePage = ({ query }: { query: string }) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Navbar />
-      <main className="mx-auto min-h-screen w-full max-w-[1500px] px-10 lg:px-28">
+      <main className="mx-auto min-h-screen w-full max-w-[1500px] overflow-hidden px-8 lg:px-28">
         <section className="flex h-screen w-full items-center justify-between lg:gap-10 xl:gap-20" id="home">
           <div className="lg:max-w-[50%]">
             <HeroText />
@@ -42,8 +44,13 @@ const PreviewHomePage = ({ query }: { query: string }) => {
         >
           <ProjectsSection />
         </section>
+        <section className="flex min-h-[1000px] w-full flex-col justify-center gap-5 xl:gap-10" id="blog">
+          <BlogSection data={data} />
+        </section>
+        <section className="flex min-h-[600px] w-full flex-col justify-center gap-5 xl:gap-10" id="contact">
+          <ContactSection />
+        </section>
       </main>
-      <SocialLinks />
       <MobileMenu />
     </>
   );

@@ -1,3 +1,4 @@
+import { CodeDecorator } from "./../components/studio/highlight";
 import { HighlightDecorator } from "@/components/studio/highlight";
 import { defineType, defineArrayMember } from "sanity";
 
@@ -31,7 +32,10 @@ export default defineType({
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
       ],
-      lists: [{ title: "Bullet", value: "bullet" }],
+      lists: [
+        { title: "Bullet", value: "bullet" },
+        { title: "Number", value: "number" },
+      ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -39,7 +43,7 @@ export default defineType({
         decorators: [
           { title: "Strong", value: "strong" },
           { title: "Emphasis", value: "em" },
-          { title: "Code", value: "code" },
+          { title: "Code", value: "code", component: CodeDecorator },
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" },
           { title: "Highlight", value: "highlight", icon: "h", component: HighlightDecorator },
@@ -79,6 +83,7 @@ export default defineType({
           { title: "HTML", value: "html" },
           { title: "CSS", value: "css" },
           { title: "Typescript", value: "typescript" },
+          { title: "C#", value: "csharp" },
         ],
         withFilename: true,
       },

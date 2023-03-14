@@ -5,8 +5,19 @@
 #__next {
   display: flex;
   flex-direction: column;
-  @apply min-h-screen justify-between overflow-hidden bg-earth-50 transition-colors duration-500 dark:bg-cinder-900;
+  @apply min-h-screen justify-between overflow-visible bg-earth-50 transition-colors duration-500 dark:bg-cinder-900;
 }
 html {
   @apply scroll-smooth !important;
 }
+h1,
+h2,
+h3,
+h4 {
+  scroll-margin-top: 50px;
+}
+/* pre {
+  display: inline-block;
+  max-width: 800px;
+  overflow-x: auto;
+} */

@@ -1,14 +1,21 @@
 import BlogPost from "@/components/blog/BlogPost";
 import BlogHero from "@/components/blog/hero/BlogHero";
+import { TableOfContents } from "@/components/blog/TableOfContent";
 import PreviewPostPage from "@/components/studio/preview/PreviewPostPage";
 import Divider from "@/components/utils/Divider";
 import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
 import { client } from "@/libs/sanity.client";
+import { parseOutline } from "@/utils/GetNestedHeadings";
+import { useIntersectionObserver } from "@/utils/useIntersectionObserver";
+import { motion } from "framer-motion";
 import { groq } from "next-sanity";
 import { PreviewSuspense } from "next-sanity/preview";
 import Head from "next/head";
-const Post = ({ preview, data, slug }: { preview: boolean; data: Post; slug: string }) => {
-  console.log(data);
+import { useState } from "react";
+
+const Post = ({ preview, data, slug, headings }: { preview: boolean; data: Post; slug: string; headings: any }) => {
+  const [activeId, setActiveId] = useState("");
+  useIntersectionObserver(setActiveId);
   if (preview) {
     return (
       <PreviewSuspense
@@ -22,6 +29,7 @@ const Post = ({ preview, data, slug }: { preview: boolean; data: Post; slug: str
       </PreviewSuspense>
     );
   }
+  const outline = parseOutline(headings.headings);
   return (
     <>
       <Head>
@@ -38,13 +46,24 @@ const Post = ({ preview, data, slug }: { preview: boolean; data: Post; slug: str
         description={data.description}
         descriptionFollowUp={false}
         publishedAt={data.publishedAt}
+        categories={data.categories}
       />
-      <main className="mx-auto w-full max-w-[1500px] flex-1 px-8 py-2 lg:px-28">
+      <main className="mx-auto w-full max-w-[1500px] flex-1 overflow-visible px-0 py-2 lg:px-28">
         <FadeInWhenVisible>
           <Divider />
         </FadeInWhenVisible>
         <FadeInWhenVisible>
-          <BlogPost data={data} />
+          <motion.div
+            className="mt-16 flex justify-between overflow-visible"
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1, transition: { delay: 0.7, duration: 1.5 } }}
+          >
+            <BlogPost data={data} />
+            <div className="sticky top-28 hidden h-[300px] overflow-auto p-5 xl:block">
+              <h3 className="mb-3 text-lg text-cinder-700 dark:text-gray-400">TABLE OF CONTENTS</h3>
+              <TableOfContents outline={outline} activeId={activeId} />
+            </div>
+          </motion.div>
         </FadeInWhenVisible>
       </main>
     </>
@@ -58,6 +77,10 @@ const query = groq`
     categories[]->
 }
 `;
+const queryHeadings = groq`
+*[_type=='post' && slug.current == $slug][0]{ 
+  "headings": body[length(style) == 2 && string::startsWith(style, "h")]}
+`;
 export const getStaticProps = async ({ preview = false, params }: { preview: boolean; params: { slug: string } }) => {
   const { slug } = params;
   if (preview) {
@@ -65,8 +88,9 @@ export const getStaticProps = async ({ preview = false, params }: { preview: boo
   }
 
   const data = await client.fetch(query, { slug });
+  const headings = await client.fetch(queryHeadings, { slug });
 
-  return { props: { preview, data, slug }, revalidate: 600 };
+  return { props: { preview, data, slug, headings }, revalidate: 600 };
 };
 export default Post;
 export async function getStaticPaths() {
