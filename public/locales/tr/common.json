@@ -12,15 +12,15 @@
   "aboutMe": "Hakkımda",
   "aboutText": {
     "first": "Merhaba! Benim adım Mehmet Eren Çelik ve kendi kendini yetiştirmiş bir geliştiriciyim. 2021 yılında hukuk fakültesinden mezun oldum ancak Covid döneminde ve hukuk stajımı yaparken web geliştirme ile ilgilenmeye başladım. Haziran 2022'den beri bu alanda tam zamanlı olarak kendimi geliştiriyorum.",
-    "second": "HTML & CSS öğrenmeyle başladığım bu süreçte JavaScript, TypeScript, React.js, Next.js, Remix.js gibi teknolojileri de öğrendim. Sürekli kendimi geliştirmek ve yeni teknolojiler öğrenmek benim için çok önemlidir. Bu sebeple Aralık 2022'den beri",
+    "second": "HTML & CSS öğrenmeyle başladığım bu süreçte JavaScript, TypeScript, React.js, Next.js, Remix.js gibi teknolojileri de öğrendim. Sürekli kendimi geliştirmek ve yeni teknolojiler öğrenmek benim için çok önemli. Bu sebeple Aralık 2022'den beri",
     "third": "'inde bursiyer olarak Dart ve Flutter eğitimleri almaktayım.",
-    "fourth": "Bu yolculuğa devam ederken, çalışmaktan ve kendimi geliştirmekten keyif alıyorum. Gelecekte de gelişmeye ve öğrenmeye devam edeceğim. Aynı tutkuyu paylaşan insanlarla birlikte çalışmak benim için büyük bir zevk olacaktır.",
+    "fourth": "Bu yolculuğa devam ederken, çalışmaktan ve kendimi geliştirmekten keyif alıyorum. Gelecekte de gelişmeye ve öğrenmeye devam edeceğim. Aynı tutkuyu paylaşan insanlarla birlikte çalışmayı umuyorum.",
     "fifth": "Bu süreçte üzerinde çalıştığım bazı projeleri de paylaşmak isterim. Aşağıdaki listeye göz atabilir ve projelerim hakkında daha fazla bilgi edinebilirsiniz."
   },
   "projects": {
-    "twitato": "Twitato, kullanıcıların kısa mesajlar oluşturmasına ve paylaşmasına, diğerlerinin gönderilerine yorum yapmasına, beğenmesine veya yer işareti koymasına ve Twitter'a benzer şekilde trend olan konuları görmesine olanak tanıyan bir sosyal medya platformudur.",
+    "twitato": "Twitato, kullanıcıların kısa postlar oluşturmasına ve paylaşmasına, diğer kullanıcıların gönderilerine yorum yapmasına, beğenmesine ve yer işareti koymasına ve Twitter'a benzer şekilde trend olan konuları görmesine olanak tanıyan bir sosyal medya platformudur.",
     "imdb-c": "IMDB-C, kullanıcıların filmleri ve dizileri aramasına, derecelendirmesine, izleme listelerine eklemesine ve favori olarak işaretlemesine olanak tanıyan, TMDB api ile oluşturulmuş bir film ve dizi veritabanı web sitesidir.",
-    "gamingRealm": "GamingRealm, Rawg.io api ile oluşturulmuş bir web sitesidir ve kullanıcıların oyunlara göz atmasına, favorilerine eklemesine ve oyunlar hakkında yorum yapmasına olanak tanıyarak onları bir oyun tutkunları topluluğuyla buluşturur."
+    "gamingRealm": "GamingRealm, Rawg.io api ile oluşturulmuş bir oyun veritabanı web sitesidir ve kullanıcıların oyunlara göz atmasına, favorilerine eklemesine ve oyunlar hakkında yorum yapmasına olanak tanıyarak onları bir oyun tutkunları topluluğuyla buluşturur."
   },
   "blogSectionTitle": "Son Yazılar",
   "blogSectionButton": "Hepsini Gör",

@@ -8,13 +8,37 @@ export default defineType({
     defineField({
       name: "title",
       title: "Title",
-      type: "string",
+      type: "object",
+      fields: [
+        {
+          title: "English",
+          name: "en",
+          type: "string",
+        },
+        {
+          title: "Turkish",
+          name: "tr",
+          type: "string",
+        },
+      ],
     }),
     defineField({
       name: "description",
       description: "Enter a short snippet for the blog",
       title: "Description",
-      type: "string",
+      type: "object",
+      fields: [
+        {
+          title: "English",
+          name: "en",
+          type: "string",
+        },
+        {
+          title: "Turkish",
+          name: "tr",
+          type: "string",
+        },
+      ],
     }),
     defineField({
       name: "slug",
@@ -42,8 +66,21 @@ export default defineType({
     defineField({
       name: "categories",
       title: "Categories",
-      type: "array",
-      of: [{ type: "reference", to: { type: "category" } }],
+      type: "object",
+      fields: [
+        {
+          name: "en",
+          title: "English",
+          type: "array",
+          of: [{ type: "reference", to: { type: "category" } }],
+        },
+        {
+          name: "tr",
+          title: "Turkish",
+          type: "array",
+          of: [{ type: "reference", to: { type: "category" } }],
+        },
+      ],
     }),
     defineField({
       name: "publishedAt",
@@ -58,7 +95,19 @@ export default defineType({
     defineField({
       name: "body",
       title: "Body",
-      type: "blockContent",
+      type: "object",
+      fields: [
+        {
+          title: "English",
+          name: "en",
+          type: "blockContent",
+        },
+        {
+          title: "Turkish",
+          name: "tr",
+          type: "blockContent",
+        },
+      ],
     }),
   ],
 

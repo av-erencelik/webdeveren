@@ -30,14 +30,14 @@ const Blog = ({ preview, data }: { preview: boolean; data: Post[] }) => {
   );
 };
 const query = groq`
-*[_type=='post']{slug,title,description,mainImage,publishedAt,categories,featured} {
+*[_type=='post']{slug,"title": title[$lang],"body": body[$lang],"description": description[$lang],"categories": categories[$lang],mainImage,publishedAt,featured} {
   ...,
   author->,
   categories[]->
  } | order(publishedAt desc)[0...10]
 `;
 export const getStaticProps = async ({ preview = false, locale }: { preview: boolean; locale: string }) => {
-  const data = await client.fetch(query);
+  const data = await client.fetch(query, { lang: locale });
 
   return { props: { preview, data, ...(await serverSideTranslations(locale, ["common"])) }, revalidate: 600 };
 };

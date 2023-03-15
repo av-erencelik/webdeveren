@@ -6,6 +6,7 @@ import DarkModeToggle from "../buttons/DarkModeToggle";
 import PageLink from "../buttons/PageLink";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -45,17 +46,19 @@ const BlogNavbar = () => {
         initial="hidden"
         animate="show"
       >
-        <motion.a href="/" variants={itemUp}>
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
-        </motion.a>
+        <motion.nav variants={itemUp}>
+          <Link href="/">
+            <Image src="/logo.png" alt="logo" width={100} height={100} />
+          </Link>
+        </motion.nav>
 
         <motion.nav variants={itemUp}>
           <motion.ul className="flex gap-5" variants={container} initial="hidden" animate="show">
             <motion.li variants={itemUp}>
-              <PageLink to="/" name={t("blog.nav.home")} />
+              <PageLink to="/" name={t("blog.nav.home")} route={true} />
             </motion.li>
             <motion.li variants={itemUp}>
-              <PageLink to="/blog" name={t("blog.nav.posts")} />
+              <PageLink to="/blog" name={t("blog.nav.posts")} route={true} />
             </motion.li>
             <motion.li className="flex items-center" variants={itemUp}>
               <DarkModeToggle />

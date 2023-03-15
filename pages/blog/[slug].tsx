@@ -29,6 +29,7 @@ const Post = ({
   const [activeId, setActiveId] = useState("");
   const { t } = useTranslation("common");
   useIntersectionObserver(setActiveId);
+
   if (preview) {
     return (
       <PreviewSuspense
@@ -46,11 +47,8 @@ const Post = ({
   return (
     <>
       <Head>
-        <title>Web Dev Eren - Blog</title>
-        <meta
-          name="description"
-          content="Join me on my web development journey and discover the intersection of code and creativity. From personal stories to tech tips, my blog has something for everyone."
-        />
+        <title>Web Dev Eren - {data.title}</title>
+        <meta name="description" content={data.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -86,13 +84,17 @@ const query = groq`
 *[_type=='post' && slug.current == $slug][0]
 {
     ...,
+    "title": title[$lang],
+    "body": body[$lang],
+    "description": description[$lang],
+    "categories": categories[$lang],
     author->,
     categories[]->
 }
 `;
 const queryHeadings = groq`
 *[_type=='post' && slug.current == $slug][0]{ 
-  "headings": body[length(style) == 2 && string::startsWith(style, "h")]}
+  "headings": body[$lang][length(style) == 2 && string::startsWith(style, "h")]}
 `;
 export const getStaticProps = async ({
   preview = false,
@@ -105,11 +107,11 @@ export const getStaticProps = async ({
 }) => {
   const { slug } = params;
   if (preview) {
-    return { props: { preview, slug } };
+    return { props: { preview, slug, ...(await serverSideTranslations(locale, ["common"])) } };
   }
 
-  const data: Post = await client.fetch(query, { slug });
-  const headings: { headings: Heading[] } = await client.fetch(queryHeadings, { slug });
+  const data: Post = await client.fetch(query, { slug, lang: locale });
+  const headings: { headings: Heading[] } = await client.fetch(queryHeadings, { slug, lang: locale });
 
   return {
     props: { preview, data, slug, headings: headings.headings, ...(await serverSideTranslations(locale, ["common"])) },
