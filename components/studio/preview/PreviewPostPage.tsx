@@ -28,7 +28,7 @@ const PreviewPostPage = ({ query, slug }: { query: string; slug: string }) => {
   return (
     <>
       <Head>
-        <title>Web Dev Eren - {data.title}</title>
+        <title>{"Web Dev Eren - " + data.title}</title>
         <meta name="description" content={data.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
