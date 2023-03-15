@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "welcome": "Hi, my name is",
+  "heroText": "I am an enthusiastic and self-taught front-end developer dedicated to creating beautiful and functional websites.",
+  "contactMe": "Contact Me",
+  "aboutMe": "About Me",
+  "aboutText": {
+    "first": "Hello! My name is Mehmet Eren Çelik and I am a self-taught developer. I am passionate about web development and front end. I graduated from law school in 2021, but during the Covid era an while doing my legal apprenticeship, I became interested in web development. I have been studying full-time on this field since june 2022.",
+    "second": " I started with learning HTML & CSS and during this process, I also learned technologies like JavaScript, TypeScript, React.js, Next.js, and Remix.js. Most recently, I have been learning Dart and Flutter as a Trainee at",
+    "third": "since December 2022. Constantly improving myself and learning new technologies is essential for me.",
+    "fourth": "As I continue on this passionate journey, I enjoy working and developing myself. I will continue to improve and learn in the future as well. Collaborating with people who share this passion would be a great pleasure for me.",
+    "fifth": "I would also like to share some of the projects I have worked on along the way. You can take a look at the list below and learn more about my projects."
+  },
+  "projects": {
+    "twitato": "Twitato is a social media platform that allows users to create and share short messages, comment, like or bookmark other's posts, and see the trending topics, similar to Twitter.",
+    "imdb-c": "IMDB-C is a movie and TV shows database website created with TMDB api that allow users to search for movies and TV shows, rate them, add them to their watchlist, and mark them as favorites.",
+    "gamingRealm": "GamingRealm is a website, powered by Rawg.io api, allows users to browse, favorite, and comment on games, connecting them with a community of gaming enthusiasts."
+  },
+  "blogSectionTitle": "Latest Blog Posts",
+  "blogSectionButton": "View All",
+  "readMore": "Read More",
+  "featured": "Featured",
+  "contact": {
+    "title": "Reach Out",
+    "text": "If you're looking for someone who is eager to learn, work hard, and contribute to a team, I would love to discuss any opportunities you have available. Please feel free to reach out!",
+    "button": "Email Me"
+  },
+  "meta": {
+    "homeDesc": "Enthusiastic frontend developer Mehmet Eren Çelik",
+    "blogDesc": "Join me on my web development journey and discover the intersection of code and creativity. From personal stories to tech tips, my blog has something for everyone."
+  },
+  "blog": {
+    "nav": {
+      "home": "Home",
+      "posts": "Posts"
+    },
+    "heroDescFirst": "Join me on my web development journey and discover the intersection of code and creativity.",
+    "heroDescSecond": "From personal stories to tech tips, my blog has something for everyone!",
+    "toc": "TABLE OF CONTENTS"
+  }
+}

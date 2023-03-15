@@ -1,12 +1,12 @@
 import { cn } from "@/utils/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { CgMenuGridR } from "react-icons/cg";
-import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
 import { LayoutGrid, X } from "lucide-react";
+import { useTranslation } from "next-i18next";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation("common");
   return (
     <>
       <button
@@ -30,19 +30,19 @@ const MobileMenu = () => {
               className="flex h-28 w-screen flex-wrap justify-center p-3"
             >
               <a className="my-auto w-1/3 text-center font-semibold" href="#about">
-                About
+                {t("nav.about")}
               </a>
               <a className="my-auto w-1/3 text-center font-semibold" href="#skills">
-                Skills
+                {t("nav.skills")}
               </a>
               <a className="my-auto w-1/3 text-center font-semibold" href="#projects">
-                Projects
+                {t("nav.projects")}
               </a>
               <a className="my-auto w-1/3 text-center font-semibold" href="#blog">
-                Blog
+                {t("nav.blog")}
               </a>
               <a className="my-auto w-1/3 text-center font-semibold" href="#contact">
-                Contact
+                {t("nav.contact")}
               </a>
               <button onClick={() => setIsOpen((prev) => !prev)} className="absolute bottom-4 right-4 text-earth-300">
                 <X size={24} />

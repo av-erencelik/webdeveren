@@ -11,7 +11,11 @@ import { PreviewSuspense } from "next-sanity/preview";
 import PreviewHomePage from "@/components/studio/preview/PreviewHomePage";
 import BlogSection from "@/components/blog/BlogSection";
 import ContactSection from "@/components/contact/ContactSection";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+
 export default function Home({ preview, data }: { preview: boolean; data: Post[] }) {
+  const { t } = useTranslation("common");
   if (preview) {
     return (
       <PreviewSuspense
@@ -29,7 +33,7 @@ export default function Home({ preview, data }: { preview: boolean; data: Post[]
     <>
       <Head>
         <title>Web Dev Eren</title>
-        <meta name="description" content="Enthusiastic frontend developer Mehmet Eren Çelik" />
+        <meta name="description" content={t("meta.homeDesc") ? (t("meta.homeDesc") as string) : ""} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -73,12 +77,12 @@ const query = groq`
   categories[]->
  } | order(publishedAt desc)[0..1]
 `;
-export const getStaticProps = async ({ preview = false }) => {
+export const getStaticProps = async ({ preview = false, locale }: { preview: boolean; locale: string }) => {
   if (preview) {
     return { props: { preview } };
   }
 
   const data = await client.fetch(query);
 
-  return { props: { preview, data }, revalidate: 600 };
+  return { props: { preview, data, ...(await serverSideTranslations(locale, ["common"])) }, revalidate: 600 };
 };

@@ -1,13 +1,11 @@
 import { cn } from "@/utils/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import DarkModeToggle from "../buttons/DarkModeToggle";
-
 import PageLink from "../buttons/PageLink";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
-
+import { useTranslation } from "next-i18next";
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -24,6 +22,7 @@ const itemUp = {
 
 const BlogNavbar = () => {
   const [showShadow, setShowShadow] = useState(false);
+  const { t } = useTranslation("common");
   useEffect(() => {
     const onScroll = function () {
       if (window.scrollY >= 150) {
@@ -53,10 +52,10 @@ const BlogNavbar = () => {
         <motion.nav variants={itemUp}>
           <motion.ul className="flex gap-5" variants={container} initial="hidden" animate="show">
             <motion.li variants={itemUp}>
-              <PageLink to="/" name="Home" />
+              <PageLink to="/" name={t("blog.nav.home")} />
             </motion.li>
             <motion.li variants={itemUp}>
-              <PageLink to="/blog" name="Posts" />
+              <PageLink to="/blog" name={t("blog.nav.posts")} />
             </motion.li>
             <motion.li className="flex items-center" variants={itemUp}>
               <DarkModeToggle />

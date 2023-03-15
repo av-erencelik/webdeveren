@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { FileText, Github, Linkedin, Twitter } from "lucide-react";
+import { useTranslation } from "next-i18next";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 const fadeIn = {
   offscreen: { opacity: 0, y: 50 },
   onscreen: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 const ContactSection = () => {
+  const { t } = useTranslation("common");
   return (
     <FadeInWhenVisible>
       <motion.div className="flex flex-col items-center justify-center gap-6" variants={fadeIn}>
-        <h2 className="text-5xl font-bold tracking-wide text-earth-300">Reach Out</h2>
-        <p className="max-w-[500px] text-center text-cinder-700 dark:text-gray-400">
-          If you&apos;re looking for someone who is eager to learn, work hard, and contribute to a team, I would love to
-          discuss any opportunities you have available. Please feel free to reach out!
-        </p>
+        <h2 className="text-5xl font-bold tracking-wide text-earth-300">{t("contact.title")}</h2>
+        <p className="max-w-[500px] text-center text-cinder-700 dark:text-gray-400">{t("contact.text")}</p>
         <div className="flex items-center gap-8">
           <a
             href="https://github.com/av-erencelik"
@@ -54,7 +53,7 @@ const ContactSection = () => {
         >
           <span className="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-earth-300 transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
           <span className="ease relative font-thin tracking-wider text-earth-300 transition duration-300 group-hover:text-cinder-700">
-            Email Me
+            {t("contact.button")}
           </span>
         </a>
       </motion.div>

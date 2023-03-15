@@ -1,6 +1,8 @@
 import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 const itemUp = {
   offscreen: { opacity: 0, y: -50 },
   onscreen: { opacity: 1, y: 0, transition: { type: "tween", duration: 1, delay: 0.7 } },
@@ -16,7 +18,7 @@ const itemRight = {
 
 const BlogHero = ({
   title = "Web Dev Eren",
-  description = "Join me on my web development journey and discover the intersection of code and creativity.",
+  description = "",
   descriptionFollowUp = true,
   publishedAt,
   categories,
@@ -27,6 +29,8 @@ const BlogHero = ({
   descriptionFollowUp?: boolean;
   categories?: Category[];
 }) => {
+  const { t } = useTranslation("common");
+  const router = useRouter();
   return (
     <FadeInWhenVisible>
       <motion.section
@@ -43,16 +47,12 @@ const BlogHero = ({
               variants={itemLeft}
             >
               {description}{" "}
-              {descriptionFollowUp && (
-                <span className="hidden md:inline">
-                  From personal stories to tech tips, my blog has something for everyone!
-                </span>
-              )}
+              {descriptionFollowUp && <span className="hidden md:inline">{t("blog.heroDescSecond")}</span>}
             </motion.h4>
             <div className="flex items-center justify-between">
               <motion.p variants={itemLeft} className="text-xs text-cinder-700 dark:text-gray-400">
                 {publishedAt &&
-                  new Date(publishedAt).toLocaleDateString("en-EN", {
+                  new Date(publishedAt).toLocaleDateString(router.locale === "en" ? "en-EN" : "tr-Tr", {
                     month: "long",
                     day: "2-digit",
                     year: "numeric",

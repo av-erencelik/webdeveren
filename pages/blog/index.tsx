@@ -1,24 +1,23 @@
 import BlogHero from "@/components/blog/hero/BlogHero";
 import Head from "next/head";
 import { groq } from "next-sanity";
-import { motion } from "framer-motion";
 import FadeInWhenVisible from "@/components/utils/FadeInWhenVisible";
 import BlogList from "@/components/blog/BlogList";
 import { client } from "@/libs/sanity.client";
 import Divider from "@/components/utils/Divider";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const Blog = ({ preview, data }: { preview: boolean; data: Post[] }) => {
+  const { t } = useTranslation("common");
   return (
     <>
       <Head>
         <title>Web Dev Eren - Blog</title>
-        <meta
-          name="description"
-          content="Join me on my web development journey and discover the intersection of code and creativity. From personal stories to tech tips, my blog has something for everyone."
-        />
+        <meta name="description" content={t("meta.blogDesc") as string} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <BlogHero />
+      <BlogHero description={t("blog.heroDescFirst") as string} />
       <main className="mx-auto w-full max-w-[1500px] flex-1 overflow-hidden px-8 py-2 lg:px-28">
         <FadeInWhenVisible>
           <Divider />
@@ -37,10 +36,10 @@ const query = groq`
   categories[]->
  } | order(publishedAt desc)[0...10]
 `;
-export const getStaticProps = async ({ preview = false }) => {
+export const getStaticProps = async ({ preview = false, locale }: { preview: boolean; locale: string }) => {
   const data = await client.fetch(query);
 
-  return { props: { preview, data }, revalidate: 600 };
+  return { props: { preview, data, ...(await serverSideTranslations(locale, ["common"])) }, revalidate: 600 };
 };
 
 export default Blog;

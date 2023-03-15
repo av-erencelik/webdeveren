@@ -1,16 +1,17 @@
 import BlogLayout from "@/components/layouts/BlogLayout";
 import HomeLayout from "@/components/layouts/HomeLayout";
 import "@/styles/globals.css";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
-import { Lato } from "next/font/google";
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
-export default function App({ Component, pageProps, router }: AppProps) {
+import { Source_Sans_Pro } from "next/font/google";
+const sansPro = Source_Sans_Pro({ subsets: ["latin"], weight: ["400", "600", "700"] });
+function App({ Component, pageProps, router }: AppProps) {
   if (router.pathname.startsWith("/blog")) {
     return (
       <>
         <style jsx global>{`
           html {
-            font-family: ${lato.style.fontFamily};
+            font-family: ${sansPro.style.fontFamily};
           }
         `}</style>
         <BlogLayout>
@@ -23,7 +24,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <>
         <style jsx global>{`
           html {
-            font-family: ${lato.style.fontFamily};
+            font-family: ${sansPro.style.fontFamily};
           }
         `}</style>
 
@@ -35,7 +36,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <>
       <style jsx global>{`
         html {
-          font-family: ${lato.style.fontFamily};
+          font-family: ${sansPro.style.fontFamily};
         }
       `}</style>
       <HomeLayout>
@@ -44,3 +45,4 @@ export default function App({ Component, pageProps, router }: AppProps) {
     </>
   );
 }
+export default appWithTranslation(App);

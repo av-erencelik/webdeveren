@@ -12,6 +12,8 @@ import { groq } from "next-sanity";
 import { PreviewSuspense } from "next-sanity/preview";
 import Head from "next/head";
 import { useState } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const Post = ({
   preview,
@@ -25,6 +27,7 @@ const Post = ({
   headings: Heading[];
 }) => {
   const [activeId, setActiveId] = useState("");
+  const { t } = useTranslation("common");
   useIntersectionObserver(setActiveId);
   if (preview) {
     return (
@@ -70,7 +73,7 @@ const Post = ({
           >
             <BlogPost data={data} />
             <div className="sticky top-28 hidden h-[300px] overflow-auto p-5 xl:block">
-              <h3 className="mb-3 text-lg text-cinder-700 dark:text-gray-400">TABLE OF CONTENTS</h3>
+              <h3 className="mb-3 text-lg text-cinder-700 dark:text-gray-400">{t("blog.toc")}</h3>
               <TableOfContents outline={outline} activeId={activeId} />
             </div>
           </motion.div>
@@ -91,7 +94,15 @@ const queryHeadings = groq`
 *[_type=='post' && slug.current == $slug][0]{ 
   "headings": body[length(style) == 2 && string::startsWith(style, "h")]}
 `;
-export const getStaticProps = async ({ preview = false, params }: { preview: boolean; params: { slug: string } }) => {
+export const getStaticProps = async ({
+  preview = false,
+  params,
+  locale,
+}: {
+  preview: boolean;
+  params: { slug: string };
+  locale: string;
+}) => {
   const { slug } = params;
   if (preview) {
     return { props: { preview, slug } };
@@ -100,7 +111,10 @@ export const getStaticProps = async ({ preview = false, params }: { preview: boo
   const data: Post = await client.fetch(query, { slug });
   const headings: { headings: Heading[] } = await client.fetch(queryHeadings, { slug });
 
-  return { props: { preview, data, slug, headings: headings.headings }, revalidate: 600 };
+  return {
+    props: { preview, data, slug, headings: headings.headings, ...(await serverSideTranslations(locale, ["common"])) },
+    revalidate: 600,
+  };
 };
 export default Post;
 export async function getStaticPaths() {
