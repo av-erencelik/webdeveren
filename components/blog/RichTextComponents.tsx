@@ -65,14 +65,14 @@ export const RichTextComponents = {
     p: ({ children }: any) => <p className="py-3 px-4 text-lg leading-relaxed">{children}</p>,
     normal: ({ children }: any) => <p className="py-3 px-4 text-lg leading-relaxed">{children}</p>,
     blockquote: ({ children }: any) => (
-      <blockquote className="my-5 border-l-4 border-l-cyan-300 py-5 px-4 pl-5">{children}</blockquote>
+      <blockquote className="my-5 border-l-4 border-l-earth-300 py-5 px-4 pl-5 text-xl">{children}</blockquote>
     ),
   },
   marks: {
     link: ({ children, value }: any) => {
       const rel = !value.href.startsWith("/") ? "noreferrer noopenner" : undefined;
       return (
-        <Link href={value.href} rel={rel} className="px-4 text-lg underline decoration-cyan-300 hover:decoration-black">
+        <Link href={value.href} rel={rel} className="text-lg underline decoration-earth-200 hover:decoration-earth-300">
           {children}
         </Link>
       );
