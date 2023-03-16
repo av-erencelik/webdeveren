@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const PageLink = ({ to, name, route = false }: { to: string; name: string; route?: boolean }) => {
   return (
