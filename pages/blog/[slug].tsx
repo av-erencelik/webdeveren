@@ -66,12 +66,12 @@ const Post = ({
         <FadeInWhenVisible>
           <motion.div
             className="mt-16 flex justify-between overflow-visible"
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1, transition: { delay: 0.7, duration: 1.5 } }}
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1, transition: { delay: 0.7, duration: 1.5 } }}
           >
             <BlogPost data={data} />
             <div className="sticky top-28 hidden h-[300px] overflow-auto p-5 xl:block">
-              <h3 className="mb-3 text-lg text-cinder-700 dark:text-gray-400">{t("blog.toc")}</h3>
+              <h3 className="mb-3 text-center text-lg text-cinder-700 dark:text-gray-400">{t("blog.toc")}</h3>
               <TableOfContents outline={outline} activeId={activeId} />
             </div>
           </motion.div>
