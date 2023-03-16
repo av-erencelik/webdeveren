@@ -13,7 +13,7 @@ const itemUp = {
   hidden: { opacity: 0, x: -100 },
   show: { opacity: 1, x: 0, transition: { type: "tween", duration: 1 } },
 };
-const SocialLinks = () => {
+const Social = () => {
   const links = [
     {
       id: 1,
@@ -93,4 +93,4 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+export default Social;

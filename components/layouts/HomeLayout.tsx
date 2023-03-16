@@ -1,4 +1,4 @@
-import SocialLinks from "../buttons/SocialLinks";
+import Social from "../Buttons/Social";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 
@@ -7,7 +7,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Navbar />
       {children}
-      <SocialLinks />
+      <Social />
       <Footer />
     </>
   );

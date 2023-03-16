@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
-import DarkModeToggle from "../buttons/DarkModeToggle";
-import PageLink from "../buttons/PageLink";
+import DarkModeToggle from "../Buttons/DarkModeToggle";
+import PageLink from "../Buttons/PageLink";
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 
 const container = {
