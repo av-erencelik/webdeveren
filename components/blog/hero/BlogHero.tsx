@@ -34,7 +34,7 @@ const BlogHero = ({
   return (
     <FadeInWhenVisible>
       <motion.section
-        className="mt-[91px] flex h-[200px] w-full items-center overflow-hidden lg:h-[300px]"
+        className="mt-[91px] flex min-h-[200px] w-full items-center overflow-hidden lg:h-[300px]"
         variants={itemUp}
       >
         <div className=" mx-auto flex w-full max-w-[1500px] items-center justify-between px-8 lg:px-28">

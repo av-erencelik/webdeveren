@@ -47,11 +47,11 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
           </div>
         </div>
         <Link href={`/blog/${post.slug.current}`}>
-          <h4 className="text-xl font-semibold text-cinder-700 transition-all duration-200 hover:text-earth-300 hover:underline dark:text-earth-50 dark:hover:text-earth-300">
+          <h4 className="text-xl font-semibold text-cinder-700 transition-all duration-200 line-clamp-2 hover:text-earth-300 hover:underline dark:text-earth-50 dark:hover:text-earth-300">
             {post.title}
           </h4>
         </Link>
-        <p className="text-sm text-gray-400 line-clamp-2 dark:text-gray-400">{post.description}</p>
+        <p className="mb-4 text-sm text-gray-400 line-clamp-2 dark:text-gray-400">{post.description}</p>
         <Link href={`/blog/${post.slug.current}`} className="ml-auto">
           <p className="absolute right-5 bottom-5 flex items-center text-sm font-semibold text-cinder-700 transition-all duration-200 hover:text-earth-300 hover:underline dark:text-earth-50 dark:hover:text-earth-300">
             {t("readMore")} <ArrowUpRight size={16} />
