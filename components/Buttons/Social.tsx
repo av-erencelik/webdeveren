@@ -59,7 +59,7 @@ const Social = () => {
           Resume <FileText size={20} />
         </>
       ),
-      href: "https://twitter.com/m_eren_celik",
+      href: "/resume.pdf",
       style: "hover:rounded-br-md",
       download: true,
     },

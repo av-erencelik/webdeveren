@@ -39,9 +39,10 @@ const ContactSection = () => {
             <Twitter size={18} />
           </a>
           <a
-            href="https://twitter.com/m_eren_celik"
+            href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
+            download={true}
             className="text-cinder-900  transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300"
           >
             <FileText size={18} />
