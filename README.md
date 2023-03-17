@@ -22,6 +22,7 @@ The website is written in TypeScript for improved type safety and maintainabilit
 To install the website locally, clone this repository and run the following commands:
 
 `npm install`
+
 `npm run dev`
 
 This will start the development server at `http://localhost:3000`.
