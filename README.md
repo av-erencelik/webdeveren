@@ -37,7 +37,7 @@ This repository is licensed under the MIT License. See [LICENSE](https://choosea
 
 ## Credits
 
-This website was built by [Your Name](https://yourwebsite.com) using the following tools:
+This website was built by [Mehmet Eren Çelik](webdeveren.com) using the following tools:
 
 - [Next.js](https://nextjs.org/)
 - [Sanity.io CMS](https://www.sanity.io/)
