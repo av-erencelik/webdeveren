@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# webdeveren with Next.js, Sanity.io CMS, and TypeScript
 
-## Getting Started
+This is the repository for my personal portfolio website built with Next.js, Sanity.io CMS, and TypeScript.
 
-First, run the development server:
+## About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+My portfolio website is a showcase of my skills, projects, and experience. It features a blog section where I write about various topics related to web development and design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The website is built with Next.js, a React framework for server-side rendering, and Sanity.io CMS, a headless CMS that enables me to easily manage my blog content.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+I also used the following libraries:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Framer Motion for animations
+- i18next for internationalization support
+- Tailwind CSS for styling
+- Lucide React for icons
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The website is written in TypeScript for improved type safety and maintainability.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+To install the website locally, clone this repository and run the following commands:
 
-To learn more about Next.js, take a look at the following resources:
+`npm install`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This will start the development server at `http://localhost:3000`.
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to use this repository as a template for your own portfolio website. You can customize the content, design, and functionality to suit your needs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This repository is licensed under the MIT License. See [LICENSE](https://choosealicense.com/licenses/mit/) for more information.
+
+## Credits
+
+This website was built by [Your Name](https://yourwebsite.com) using the following tools:
+
+- [Next.js](https://nextjs.org/)
+- [Sanity.io CMS](https://www.sanity.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [i18next](https://www.i18next.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide React](https://github.com/lucide-icons/lucide-react)
