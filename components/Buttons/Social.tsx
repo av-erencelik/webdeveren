@@ -32,7 +32,7 @@ const Social = () => {
           LinkedIn <Linkedin size={20} />
         </>
       ),
-      href: "https://www.linkedin.com/in/mehmet-eren-%C3%A7elik-6710b0222/",
+      href: "https://www.linkedin.com/in/av-erencelik/",
     },
     {
       id: 3,

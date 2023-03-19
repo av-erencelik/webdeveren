@@ -23,7 +23,7 @@ const ContactSection = () => {
             <Github size={18} />
           </a>
           <a
-            href="https://www.linkedin.com/in/mehmet-eren-%C3%A7elik-6710b0222/"
+            href="https://www.linkedin.com/in/av-erencelik/"
             target="_blank"
             rel="noreferrer"
             className="text-cinder-900  transition-colors hover:text-earth-300 dark:text-earth-50 dark:hover:text-earth-300"
