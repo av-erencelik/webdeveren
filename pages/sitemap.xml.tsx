@@ -9,10 +9,11 @@ export default function SiteMap() {
 export async function getServerSideProps({ res }: { res: NextApiResponse }) {
   const baseUrl = `https://webdeveren.com`;
   const query = groq`
-      *[_type=='post']{slug},
+      *[_type=='post']{slug}
     `;
   const slugs = await client.fetch(query);
-  const posts = slugs.posts.map((post: { slug: { current: string } }) => {
+  console.log(slugs);
+  const posts = slugs.map((post: { slug: { current: string } }) => {
     const slug = post.slug.current === "/" ? "/blog" : `/blog/${post.slug.current}`;
     return `
       <loc>${baseUrl}${slug}</loc>
@@ -32,6 +33,11 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
                   `;
           })
           .join("")}
+          <url>
+            <loc>https://webdeveren.com/blog</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.7</priority>
+         </url>
     </urlset>
     `;
   res.setHeader("Content-Type", "text/xml");
