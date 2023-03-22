@@ -38,6 +38,11 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
             <changefreq>daily</changefreq>
             <priority>0.7</priority>
          </url>
+         <url>
+            <loc>https://webdeveren.com</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.7</priority>
+         </url>
     </urlset>
     `;
   res.setHeader("Content-Type", "text/xml");
