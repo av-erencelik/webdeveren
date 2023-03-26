@@ -17,7 +17,7 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
     const slug = post.slug.current === "/" ? "/blog" : `/blog/${post.slug.current}`;
     return `
       <loc>${baseUrl}${slug}</loc>
-      <changefreq>daily</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
     `;
   });
@@ -35,13 +35,13 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
           .join("")}
           <url>
             <loc>https://webdeveren.com/blog</loc>
-            <changefreq>daily</changefreq>
-            <priority>0.7</priority>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
          </url>
          <url>
-            <loc>https://webdeveren.com</loc>
-            <changefreq>daily</changefreq>
-            <priority>0.7</priority>
+            <loc>https://webdeveren.com/</loc>
+            <changefreq>yearly</changefreq>
+            <priority>1</priority>
          </url>
     </urlset>
     `;
