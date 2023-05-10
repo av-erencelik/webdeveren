@@ -8,6 +8,7 @@ export default function SiteMap() {
 
 export async function getServerSideProps({ res }: { res: NextApiResponse }) {
   const baseUrl = `https://webdeveren.com`;
+  const baseUrl2 = `https://webdeveren.com/tr`;
   const query = groq`
       *[_type=='post']{slug}
     `;
@@ -22,7 +23,16 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
     `;
   });
 
-  const locations = [...posts];
+  const trPosts = slugs.map((post: { slug: { current: string } }) => {
+    const slug = post.slug.current === "/" ? "/blog" : `/blog/${post.slug.current}`;
+    return `
+      <loc>${baseUrl2}${slug}</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    `;
+  });
+
+  const locations = [...posts, ...trPosts];
   const createSitemap = () => `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         ${locations
@@ -40,6 +50,16 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
          </url>
          <url>
             <loc>https://webdeveren.com/</loc>
+            <changefreq>yearly</changefreq>
+            <priority>1</priority>
+         </url>
+         <url>
+            <loc>https://webdeveren.com/tr</loc>
+            <changefreq>yearly</changefreq>
+            <priority>1</priority>
+         </url>
+         <url>
+            <loc>https://webdeveren.com/tr/blog</loc>
             <changefreq>yearly</changefreq>
             <priority>1</priority>
          </url>
