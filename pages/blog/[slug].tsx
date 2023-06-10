@@ -47,7 +47,7 @@ const Post = ({
   return (
     <>
       <Head>
-        <title>{"Web Dev Eren - " + data.title}</title>
+        <title>{"Eren Çelik - " + data.title}</title>
         <meta name="description" content={data.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

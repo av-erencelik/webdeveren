@@ -13,7 +13,7 @@ const Blog = ({ preview, data }: { preview: boolean; data: Post[] }) => {
   return (
     <>
       <Head>
-        <title>Web Dev Eren - Blog</title>
+        <title>Eren Çelik - Blog</title>
         <meta name="google-site-verification" content="dXQ55giVy7l2I-W7sVfBXPp4X1go0DwFixGvl4hrgC8" />
         <meta name="description" content={t("meta.blogDesc") as string} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

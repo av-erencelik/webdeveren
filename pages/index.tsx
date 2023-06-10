@@ -32,7 +32,7 @@ export default function Home({ preview, data }: { preview: boolean; data: Post[]
   return (
     <>
       <Head>
-        <title>Web Dev Eren</title>
+        <title>Eren Çelik</title>
         <meta name="description" content={t("meta.homeDesc") ? (t("meta.homeDesc") as string) : ""} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="dXQ55giVy7l2I-W7sVfBXPp4X1go0DwFixGvl4hrgC8" />
