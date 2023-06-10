@@ -7,8 +7,8 @@ export default function SiteMap() {
 }
 
 export async function getServerSideProps({ res }: { res: NextApiResponse }) {
-  const baseUrl = `https://webdeveren.com`;
-  const baseUrl2 = `https://webdeveren.com/tr`;
+  const baseUrl = `https://erencelik.dev`;
+  const baseUrl2 = `https://erencelik.dev/tr`;
   const query = groq`
       *[_type=='post']{slug}
     `;
@@ -44,22 +44,22 @@ export async function getServerSideProps({ res }: { res: NextApiResponse }) {
           })
           .join("")}
           <url>
-            <loc>https://webdeveren.com/blog</loc>
+            <loc>https://erencelik.dev/blog</loc>
             <changefreq>weekly</changefreq>
             <priority>0.9</priority>
          </url>
          <url>
-            <loc>https://webdeveren.com/</loc>
+            <loc>https://erencelik.dev/</loc>
             <changefreq>yearly</changefreq>
             <priority>1</priority>
          </url>
          <url>
-            <loc>https://webdeveren.com/tr</loc>
+            <loc>https://erencelik.dev/tr</loc>
             <changefreq>yearly</changefreq>
             <priority>1</priority>
          </url>
          <url>
-            <loc>https://webdeveren.com/tr/blog</loc>
+            <loc>https://erencelik.dev/tr/blog</loc>
             <changefreq>yearly</changefreq>
             <priority>1</priority>
          </url>
