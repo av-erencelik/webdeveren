@@ -20,7 +20,7 @@
   "projects": {
     "twitato": "Twitato is a social media platform that allows users to create and share short messages, comment, like or bookmark other's posts, and see the trending topics, similar to Twitter.",
     "imdb-c": "IMDB-C is a movie and TV shows database website created with TMDB api that allow users to search for movies and TV shows, rate them, add them to their watchlist, and mark them as favorites.",
-    "gamingRealm": "GamingRealm is a website, powered by Rawg.io api, allows users to browse, favorite, and comment on games, connecting them with a community of gaming enthusiasts."
+    "recipe": "Recipe Cost Calculator: Track recipe expenses and calculate costs effortlessly. Simplify your recipe cost management with this intuitive web app, featuring ingredient price tracking, inventory management, and insightful reports"
   },
   "blogSectionTitle": "Latest Blog Posts",
   "blogSectionButton": "View All",

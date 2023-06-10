@@ -3,7 +3,7 @@ import SectionTitle from "../utils/SectionTitle";
 import { motion } from "framer-motion";
 import twitato from "@/public/projects/twitato.png";
 import imdbc from "@/public/projects/IMDB-C.png";
-import gaming from "@/public/projects/Gaming.png";
+import recipe from "@/public/projects/recipecost.png";
 import IndividualProjects, { ProjectType } from "./IndividualProjects";
 import { cn } from "@/utils/utils";
 import { useTranslation } from "next-i18next";
@@ -23,30 +23,30 @@ const ProjectsSection = () => {
   const { t } = useTranslation("common");
   const projects: ProjectType[] = [
     {
-      hrefs: { demo: "https://twitato.vercel.app/", code: "https://github.com/av-erencelik/twitato" },
-      name: "Twitato",
-      src: twitato,
-      description: t("projects.twitato"),
-      techs: ["Next.js 13", "TypeScript", "Tailwind", "Firebase", "NextAuth"],
+      hrefs: {
+        demo: "https://sevdem-monorepo-admin.vercel.app/",
+        code: "https://github.com/av-erencelik/sevdem-monorepo",
+      },
+      name: "Recipe Cost Calculator",
+      src: recipe,
+      description: t("projects.recipe"),
+      techs: ["Next.js 13", "TypeScript", "Tailwind", "Prisma", "MySQL"],
       reverse: false,
     },
     {
       hrefs: { demo: "https://imdb-c.vercel.app/", code: "https://github.com/av-erencelik/Imdb-c" },
-      name: "Imdb-c",
+      name: "Online Movie and TV Database",
       src: imdbc,
       description: t("projects.imdb-c"),
       techs: ["Remix.js", "TypeScript", "Chakra UI", "Framer-Motion", "Node-Vibrant"],
       reverse: true,
     },
     {
-      hrefs: {
-        demo: "https://gamingdbsiteproject.netlify.app/home",
-        code: "https://github.com/av-erencelik/GamingRealm",
-      },
-      name: "GamingRealm",
-      src: gaming,
-      description: t("projects.gamingRealm"),
-      techs: ["React.js", " JavaScript", "Tailwind", "Redux", "Firebase"],
+      hrefs: { demo: "https://twitato.vercel.app/", code: "https://github.com/av-erencelik/twitato" },
+      name: "Twitato",
+      src: twitato,
+      description: t("projects.twitato"),
+      techs: ["Next.js 13", "TypeScript", "Tailwind", "Firebase", "NextAuth"],
       reverse: false,
     },
   ];

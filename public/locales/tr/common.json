@@ -20,7 +20,7 @@
   "projects": {
     "twitato": "Twitato, kullanıcıların kısa postlar oluşturmasına ve paylaşmasına, diğer kullanıcıların gönderilerine yorum yapmasına, beğenmesine ve yer işareti koymasına ve Twitter'a benzer şekilde trend olan konuları görmesine olanak tanıyan bir sosyal medya platformudur.",
     "imdb-c": "IMDB-C, kullanıcıların filmleri ve dizileri aramasına, derecelendirmesine, izleme listelerine eklemesine ve favori olarak işaretlemesine olanak tanıyan, TMDB api ile oluşturulmuş bir film ve dizi veritabanı web sitesidir.",
-    "gamingRealm": "GamingRealm, Rawg.io api ile oluşturulmuş bir oyun veritabanı web sitesidir ve kullanıcıların oyunlara göz atmasına, favorilerine eklemesine ve oyunlar hakkında yorum yapmasına olanak tanıyarak onları bir oyun tutkunları topluluğuyla buluşturur."
+    "recipe": "Tarif Maliyet Hesaplayıcı: Tarif giderlerini takip etmek ve maliyetleri kolayca hesaplamak için ideal bir web uygulaması. Tariflerin maliyetini hesaplamanın yanı sıra, malzemelerin fiyatlarını takip etme, stok yönetimi ve bilgilendirici raporlar gibi özellikler sunar."
   },
   "blogSectionTitle": "Son Yazılar",
   "blogSectionButton": "Hepsini Gör",
