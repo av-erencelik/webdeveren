@@ -17,7 +17,7 @@ const itemRight = {
 };
 
 const BlogHero = ({
-  title = "Web Dev Eren",
+  title = "Eren Çelik",
   description = "",
   descriptionFollowUp = true,
   publishedAt,

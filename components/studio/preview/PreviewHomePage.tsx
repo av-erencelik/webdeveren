@@ -19,7 +19,7 @@ const PreviewHomePage = ({ query }: { query: string }) => {
   return (
     <>
       <Head>
-        <title>Web Dev Eren</title>
+        <title>Eren Çelik</title>
         <meta name="description" content={t("meta.homeDesc") ? (t("meta.homeDesc") as string) : ""} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
