@@ -18,7 +18,7 @@ const AboutMeText = () => {
         rel="noreferrer"
         className="text-earth-300 transition-all duration-300 hover:underline"
       >
-        Oyun ve Uygulama Akademisi
+        Oyun ve Uygulama Akademisi{" "}
       </a>
       {t("aboutText.third")}
       <br /> <br />

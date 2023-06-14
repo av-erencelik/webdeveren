@@ -7,13 +7,13 @@
     "contact": "İletişim"
   },
   "welcome": "Merhaba, benim adım",
-  "heroText": "Kendisini güzel ve işlevsel web siteleri oluşturmaya adamış, öğrenmeye hevesli bir self-taught front-end developerım",
+  "heroText": "Kendisini güzel ve işlevsel web siteleri oluşturmaya adamış, öğrenmeye hevesli bir frontend geliştiriciyim",
   "contactMe": "Bana Ulaş",
   "aboutMe": "Hakkımda",
   "aboutText": {
     "first": "Merhaba! Benim adım Mehmet Eren Çelik ve kendi kendini yetiştirmiş bir geliştiriciyim. 2021 yılında hukuk fakültesinden mezun oldum ancak Covid döneminde ve hukuk stajımı yaparken web geliştirme ile ilgilenmeye başladım. Haziran 2022'den beri bu alanda tam zamanlı olarak kendimi geliştiriyorum.",
     "second": "HTML & CSS öğrenmeyle başladığım bu süreçte JavaScript, TypeScript, React.js, Next.js, Remix.js gibi teknolojileri de öğrendim. Sürekli kendimi geliştirmek ve yeni teknolojiler öğrenmek benim için çok önemli. Bu sebeple Aralık 2022'den beri",
-    "third": "'inde bursiyer olarak Dart ve Flutter eğitimleri almaktayım.",
+    "third": "'nde bursiyer olarak Dart ve Flutter eğitimleri almaktayım.",
     "fourth": "Bu yolculuğa devam ederken, çalışmaktan ve kendimi geliştirmekten keyif alıyorum. Gelecekte de gelişmeye ve öğrenmeye devam edeceğim. Aynı tutkuyu paylaşan insanlarla birlikte çalışmayı umuyorum.",
     "fifth": "Bu süreçte üzerinde çalıştığım bazı projeleri de paylaşmak isterim. Aşağıdaki listeye göz atabilir ve projelerim hakkında daha fazla bilgi edinebilirsiniz."
   },

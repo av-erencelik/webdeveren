@@ -43,7 +43,7 @@ const ProjectsSection = () => {
     },
     {
       hrefs: { demo: "https://twitato.vercel.app/", code: "https://github.com/av-erencelik/twitato" },
-      name: "Twitato",
+      name: "Social Media Web App",
       src: twitato,
       description: t("projects.twitato"),
       techs: ["Next.js 13", "TypeScript", "Tailwind", "Firebase", "NextAuth"],
