@@ -1,7 +1,7 @@
 import FadeInWhenVisible from "../utils/FadeInWhenVisible";
 import SectionTitle from "../utils/SectionTitle";
 import { motion } from "framer-motion";
-import twitato from "@/public/projects/twitato.png";
+import eCommerce from "@/public/projects/e-commerce.png";
 import imdbc from "@/public/projects/IMDB-C.png";
 import recipe from "@/public/projects/recipecost.png";
 import IndividualProjects, { ProjectType } from "./IndividualProjects";
@@ -23,6 +23,14 @@ const ProjectsSection = () => {
   const { t } = useTranslation("common");
   const projects: ProjectType[] = [
     {
+      hrefs: { demo: "https://webdeveren.com/", code: "https://github.com/av-erencelik/e-commerce-monorepo" },
+      name: "Full Stack E-Commerce Website (Sourdough)",
+      src: eCommerce,
+      description: t("projects.ecommerce"),
+      techs: ["Next.js 13", "TypeScript", "Express", "MySQL", "Docker", "Kubernetes", "RabbitMQ"],
+      reverse: false,
+    },
+    {
       hrefs: {
         demo: "https://sevdem-monorepo-admin.vercel.app/",
         code: "https://github.com/av-erencelik/sevdem-monorepo",
@@ -31,7 +39,7 @@ const ProjectsSection = () => {
       src: recipe,
       description: t("projects.recipe"),
       techs: ["Next.js 13", "TypeScript", "Tailwind", "Prisma", "MySQL"],
-      reverse: false,
+      reverse: true,
     },
     {
       hrefs: { demo: "https://imdb-c.vercel.app/", code: "https://github.com/av-erencelik/Imdb-c" },
@@ -39,14 +47,6 @@ const ProjectsSection = () => {
       src: imdbc,
       description: t("projects.imdb-c"),
       techs: ["Remix.js", "TypeScript", "Chakra UI", "Framer-Motion", "Node-Vibrant"],
-      reverse: true,
-    },
-    {
-      hrefs: { demo: "https://twitato.vercel.app/", code: "https://github.com/av-erencelik/twitato" },
-      name: "Social Media Web App",
-      src: twitato,
-      description: t("projects.twitato"),
-      techs: ["Next.js 13", "TypeScript", "Tailwind", "Firebase", "NextAuth"],
       reverse: false,
     },
   ];

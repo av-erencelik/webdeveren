@@ -18,7 +18,7 @@
     "fifth": "I would also like to share some of the projects I have worked on along the way. You can take a look at the list below and learn more about my projects."
   },
   "projects": {
-    "twitato": "Twitato is a social media platform that allows users to create and share short messages, comment, like or bookmark other's posts, and see the trending topics, similar to Twitter.",
+    "ecommerce": "Sourdough represents a full-stack e-commerce website developed using Express-based microservices and Next.js, accepting payments through Stripe. Users can shop, manage their carts, and admin users can edit products and create promotions.",
     "imdb-c": "IMDB-C is a movie and TV shows database website created with TMDB api that allow users to search for movies and TV shows, rate them, add them to their watchlist, and mark them as favorites.",
     "recipe": "Recipe Cost Calculator: Track recipe expenses and calculate costs effortlessly. Simplify your recipe cost management with this intuitive web app, featuring ingredient price tracking, inventory management, and insightful reports"
   },

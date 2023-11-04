@@ -18,7 +18,7 @@
     "fifth": "Bu süreçte üzerinde çalıştığım bazı projeleri de paylaşmak isterim. Aşağıdaki listeye göz atabilir ve projelerim hakkında daha fazla bilgi edinebilirsiniz."
   },
   "projects": {
-    "twitato": "Twitato, kullanıcıların kısa postlar oluşturmasına ve paylaşmasına, diğer kullanıcıların gönderilerine yorum yapmasına, beğenmesine ve yer işareti koymasına ve Twitter'a benzer şekilde trend olan konuları görmesine olanak tanıyan bir sosyal medya platformudur.",
+    "ecommerce": "Sourdough, Express tabanlı mikroservisler ve Next.js ile geliştirilen full stack bir e-ticaret sitesini temsil eder; Stripe entegrasyonu ile ödeme alır, kullanıcılar alışveriş yapabilir, sepetlerini yönetebilir, ve adminler ürünleri düzenleyebilir, kampanyalar oluşturabilir.",
     "imdb-c": "IMDB-C, kullanıcıların filmleri ve dizileri aramasına, derecelendirmesine, izleme listelerine eklemesine ve favori olarak işaretlemesine olanak tanıyan, TMDB api ile oluşturulmuş bir film ve dizi veritabanı web sitesidir.",
     "recipe": "Tarif Maliyet Hesaplayıcı: Tarif giderlerini takip etmek ve maliyetleri kolayca hesaplamak için ideal bir web uygulaması. Tariflerin maliyetini hesaplamanın yanı sıra, malzemelerin fiyatlarını takip etme, stok yönetimi ve bilgilendirici raporlar gibi özellikler sunar."
   },
